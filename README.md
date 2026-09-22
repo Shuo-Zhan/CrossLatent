@@ -95,6 +95,13 @@ python -m pytest tests -q
 
 Tests cover selection against an independent OLS reference, split validation, relocated configurations, fixed evaluation, redundant versus unique information under refitting, BatchTopK semantics and decoder interventions. They require no downloaded model or GPU.
 
+## Data and pretrained SAE
+
+- [CrossLatent study data (~149 MB)]([STUDY_DATA_DOWNLOAD_URL](https://drive.google.com/file/d/1UXEZiUoYh7w9C8AQaHnPrH1HixI7DoA3/view?usp=drive_link)): Processed datasets, evaluation splits, fitted readouts, and analysis results supporting the CrossLatent study, together with source metadata and file verification utilities.
+- [CrossLatent RNA SAE (~99 MB)]([RNA_SAE_DOWNLOAD_URL](https://drive.google.com/file/d/1YTzhJXR1afEieFXQGArMO3jg7-1Dw1a-/view?usp=drive_link)): The pretrained ERNIE-RNA sparse autoencoder checkpoint used in this study, together with its training and validation sequences, configuration, and model documentation.
+
+These archives complement the core code in this repository. Pretrained backbone models are not included and should be obtained from their respective providers.
+
 ## License
 
 This source code is licensed under the MIT license found in the LICENSE file in the root directory of this source tree.
