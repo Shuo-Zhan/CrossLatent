@@ -1,0 +1,93 @@
+{
+  "project": "CrossLatent",
+  "package": "crosslatent",
+  "version": "0.1.1",
+  "derived_from": "GraBSpArk core 0.1.1",
+  "scope": "core algorithms only; no paper figures or result snapshots",
+  "files": [
+    {
+      "path": ".gitignore",
+      "sha256": "aab8fc3dec38285300916f6371bb9ac0fb8838a2897acfeeacfaf6f7adedb3b8"
+    },
+    {
+      "path": "MANIFEST.in",
+      "sha256": "3df4baa444431725de2266c84c22cbcd476c4e329c646c8a528740bcc7123dc0"
+    },
+    {
+      "path": "README.md",
+      "sha256": "bee82cb609ce9f23b1914d9b129384e44717eabd63526cd9752b48ae006b1988"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "sha256": "7e833bf72e85c15eed748e1589db0d4eb581cf1375ce21b707e265fda986b751"
+    },
+    {
+      "path": "crosslatent/__init__.py",
+      "sha256": "3f4f0462aedd17acb083607ae95be558c648b2f9bdcd9bf27907c8bc80516d68"
+    },
+    {
+      "path": "crosslatent/__main__.py",
+      "sha256": "3129adff95e0f38b87ab34cddfc27082c7892bcaec267ff5d40f160fdf55b44a"
+    },
+    {
+      "path": "crosslatent/_core/__init__.py",
+      "sha256": "b6d7461485e02531ff36d35c7e5369cef824eb314267c025654ba5d56b9408fa"
+    },
+    {
+      "path": "crosslatent/_core/neuron_boosting.py",
+      "sha256": "b8778bdda5556f660f080d929960781235e7491da5b994d368b972e7060b456d"
+    },
+    {
+      "path": "crosslatent/_core/neuron_boosting_seq.py",
+      "sha256": "b63a83446146fb34df6ab6af3b8fc8fa641e371637d4c547de1665c9f7ed2f40"
+    },
+    {
+      "path": "crosslatent/_core/sae_models.py",
+      "sha256": "0896a86d0fc0f5d937d46acb61093cd74c64a991b23191bb9c4bbf47090ffe7a"
+    },
+    {
+      "path": "crosslatent/_identity.py",
+      "sha256": "d6f90bb109fd2ea785eb51bb17dfe2459d5c33be578457e6be5436e502a18e03"
+    },
+    {
+      "path": "crosslatent/adapters.py",
+      "sha256": "6a8af5b5c264535c09ffef671620edcb2f643a6e648d756d16f202bb656af4a4"
+    },
+    {
+      "path": "crosslatent/api.py",
+      "sha256": "94216a4f4760ee6b8d1be3734a26797e2411efa2d2aaf5342e61ce8d252dce25"
+    },
+    {
+      "path": "crosslatent/cli.py",
+      "sha256": "5aaa7af3159a9a249061e5138c854c870599d70f03457e01a7b06fc49d477860"
+    },
+    {
+      "path": "crosslatent/interpretation.py",
+      "sha256": "a92f1025aff3a21aa27e29dbf2f38a12eb8c24831172f7713508719fd1d714c6"
+    },
+    {
+      "path": "docs/CORE_API.md",
+      "sha256": "4564f359e112023073bbe745a8094bc13fbce2f315cb0d7d57b6993ff933430b"
+    },
+    {
+      "path": "docs/GITHUB.md",
+      "sha256": "99bf966ab4f2c05f8f61da7c465d36cb6bf0482b86474e8e7abe365e41b7e09c"
+    },
+    {
+      "path": "docs/VALIDATION.md",
+      "sha256": "d5191d894a7c66ed23c32f04582307677ef5486a1b280d7ae6df08081a3d66e0"
+    },
+    {
+      "path": "examples/minimal.py",
+      "sha256": "00f920bcb5209b7c6c34cc9e66abcd3850789ae1799fcea25edbb9e98fa6ff89"
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "c7946a6571b482eb9c6a8e7a9c81d79eb0afa81f94d8ddd1835745d0822976a9"
+    },
+    {
+      "path": "tests/test_core.py",
+      "sha256": "0e43ec3c2cfe247bc4814ca07bf6aa91b28df07f668c9c0fa044a76c2d48fff2"
+    }
+  ]
+}
