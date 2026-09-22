@@ -95,8 +95,6 @@ python -m pytest tests -q
 
 Tests cover selection against an independent OLS reference, split validation, relocated configurations, fixed evaluation, redundant versus unique information under refitting, BatchTopK semantics and decoder interventions. They require no downloaded model or GPU.
 
-## Project identity and publication
+## License
 
-The repository name is **CrossLatent**; the Python package and command are **crosslatent**. Version and display name are centralized in `crosslatent/_identity.py`; package metadata and the command entry point are in `pyproject.toml`. This core distribution derives from the prior GraBSpArk 0.1.1 implementation and preserves its scientific algorithms.
-
-License and author citation information are pending author confirmation. No open-source license is asserted by this draft; see [third-party notices](THIRD_PARTY_NOTICES.md). Publication preparation is described in [the GitHub checklist](docs/GITHUB.md).
+This source code is licensed under the MIT license found in the LICENSE file in the root directory of this source tree.
