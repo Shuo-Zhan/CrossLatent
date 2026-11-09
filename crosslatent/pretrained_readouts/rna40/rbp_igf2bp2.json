@@ -1,0 +1,57 @@
+{
+  "schema": "latent-readout/v1",
+  "latent_ids": [
+    9054,
+    2032,
+    8538,
+    8726,
+    7508,
+    5295,
+    3393,
+    4073,
+    2784,
+    9201
+  ],
+  "coefficients": [
+    0.9940219670879775,
+    0.48567950984066727,
+    -0.7300473933295827,
+    0.6782917521672396,
+    1.1228305120490305,
+    0.7677272120098979,
+    -0.9999685489326153,
+    -0.6306988682079565,
+    -1.2710387991216154,
+    0.9362552911659365
+  ],
+  "intercept": 0.26553434844448787,
+  "n_features": 9216,
+  "dictionary_id": "study:rna40:sha256:ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+  "task": "binary",
+  "threshold": 0.35,
+  "metadata": {
+    "suite": "rna40",
+    "task_id": "rbp_igf2bp2",
+    "position_annotation": "IGF2BP2",
+    "feature_index_base": 0,
+    "feature_count": 10,
+    "sae_checkpoint_sha256": "ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+    "threshold_source": "validation selection_curve.csv; never the training JSON best_threshold",
+    "validation_mean_sequence_macro_f1": 0.5274359146106187,
+    "test_mean_sequence_macro_f1": 0.5332270475873986,
+    "source_json": "inputs/fig/paper_figures/fig3/biological100/results/rna40_latent10/rbp_igf2bp2/rbp_igf2bp2_IGF2BP2_latent10_10.json",
+    "source_json_sha256": "dff6c275d2cc1f827327025e41d8341bcfec67baf440d5ed1af8a793b49760f7",
+    "summary_json": "inputs/fig/paper_figures/fig3/biological100/evaluation/rna40_valid_test/rbp_igf2bp2/summary.json",
+    "summary_sha256": "9548d86dba797fa280be2b8e422b8078970d2bb7917e2bf5339c542df05d7620",
+    "selection_curve_sha256": "1ab52e757eb7c4ce423eaa6eb519e6884b8c7febc1fa594e4d833d298f96c74d",
+    "prediction": "intercept + activations[:, latent_ids] @ coefficients; positive if score >= threshold",
+    "selection_rule": "max valid macro F1; ties: smaller K, then lower threshold",
+    "best_single_baseline": {
+      "latent_id": 1460,
+      "coefficient": 1.0,
+      "intercept": 0.0,
+      "threshold": 0.95,
+      "test_mean_sequence_macro_f1": 0.5146653348035432
+    }
+  }
+}

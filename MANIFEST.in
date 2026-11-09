@@ -1,5 +1,13 @@
 include README.md
-recursive-include docs *.md
+include THIRD_PARTY_NOTICES.md
+recursive-include docs *.md *.json *.txt
 recursive-include examples *.py
 recursive-include tests *.py
 global-exclude __pycache__ *.py[cod] *.log
+include LICENSE
+recursive-include licenses *.txt
+recursive-include tools *.py
+recursive-include research *.py *.sh
+include CITATION.cff
+
+recursive-include crosslatent/pretrained_readouts *.json *.csv *.md

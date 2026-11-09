@@ -1,0 +1,57 @@
+{
+  "schema": "latent-readout/v1",
+  "latent_ids": [
+    3439,
+    5268,
+    786,
+    8581,
+    6683,
+    7538,
+    8333,
+    3206,
+    951,
+    8522
+  ],
+  "coefficients": [
+    0.7484083849065789,
+    1.5143263129990512,
+    1.452147326233378,
+    0.6137917410622354,
+    0.9887848746726813,
+    0.6972032179129778,
+    0.7163653511195146,
+    -0.3638430800217172,
+    -0.9736501889219543,
+    -0.8330700683855583
+  ],
+  "intercept": 0.18679187265935918,
+  "n_features": 9216,
+  "dictionary_id": "study:rna40:sha256:ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+  "task": "binary",
+  "threshold": 0.3,
+  "metadata": {
+    "suite": "rna40",
+    "task_id": "rbp_pum2",
+    "position_annotation": "PUM2",
+    "feature_index_base": 0,
+    "feature_count": 10,
+    "sae_checkpoint_sha256": "ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+    "threshold_source": "validation selection_curve.csv; never the training JSON best_threshold",
+    "validation_mean_sequence_macro_f1": 0.5778905704070226,
+    "test_mean_sequence_macro_f1": 0.5612080002114015,
+    "source_json": "inputs/fig/paper_figures/fig3/biological100/results/rna40_latent10/rbp_pum2/rbp_pum2_PUM2_latent10_10.json",
+    "source_json_sha256": "bd53a4544baa81ec9b19b9428e6dd983352036b2a0a6414c53d413c384448ce0",
+    "summary_json": "inputs/fig/paper_figures/fig3/biological100/evaluation/rna40_valid_test/rbp_pum2/summary.json",
+    "summary_sha256": "48b3b9a47a33e408a3561235f12a7da83314888c0f854ca8b82cd208f718c70b",
+    "selection_curve_sha256": "7c1c6b94bda27866bd8ea50f59c2bbf26034b97dcca2e3d17f751168dacaba70",
+    "prediction": "intercept + activations[:, latent_ids] @ coefficients; positive if score >= threshold",
+    "selection_rule": "max valid macro F1; ties: smaller K, then lower threshold",
+    "best_single_baseline": {
+      "latent_id": 1824,
+      "coefficient": 1.0,
+      "intercept": 0.0,
+      "threshold": 1.0,
+      "test_mean_sequence_macro_f1": 0.49747653736636577
+    }
+  }
+}

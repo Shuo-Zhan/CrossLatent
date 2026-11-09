@@ -1,0 +1,55 @@
+{
+  "schema": "latent-readout/v1",
+  "latent_ids": [
+    8493,
+    571,
+    8932,
+    6654,
+    3206,
+    3772,
+    4464,
+    2291,
+    5803
+  ],
+  "coefficients": [
+    0.8228619608581899,
+    1.1183920017040945,
+    0.929616716722707,
+    -0.2070244757013999,
+    -0.5611051167854447,
+    0.8876641354333074,
+    -0.2821945883645687,
+    -0.28515652913046435,
+    -0.2953564087949948
+  ],
+  "intercept": 0.1689440899329705,
+  "n_features": 9216,
+  "dictionary_id": "study:rna40:sha256:ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+  "task": "binary",
+  "threshold": 0.35,
+  "metadata": {
+    "suite": "rna40",
+    "task_id": "hairpin_loop",
+    "position_annotation": "hairpin_loop",
+    "feature_index_base": 0,
+    "feature_count": 9,
+    "sae_checkpoint_sha256": "ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+    "threshold_source": "validation selection_curve.csv; never the training JSON best_threshold",
+    "validation_mean_sequence_macro_f1": 0.6881750833463582,
+    "test_mean_sequence_macro_f1": 0.6946500036595179,
+    "source_json": "inputs/fig/paper_figures/fig3/biological100/results/rna40_latent10/hairpin_loop/hairpin_loop_hairpin_loop_latent10_9.json",
+    "source_json_sha256": "fd804b009e9e174e31dfa6a1bf305f3986372a92b17e40e689a2c8c7f82f1c75",
+    "summary_json": "inputs/fig/paper_figures/fig3/biological100/evaluation/rna40_valid_test/hairpin_loop/summary.json",
+    "summary_sha256": "228e9d2802e80016e83c6f786cb9a3806a4bbb3c74115f0a42624aa57862a666",
+    "selection_curve_sha256": "c503240177b288e3fd25a8dac73792289ab340ebc580a21308fa5e137afd7dd0",
+    "prediction": "intercept + activations[:, latent_ids] @ coefficients; positive if score >= threshold",
+    "selection_rule": "max valid macro F1; ties: smaller K, then lower threshold",
+    "best_single_baseline": {
+      "latent_id": 8493,
+      "coefficient": 1.0,
+      "intercept": 0.0,
+      "threshold": 0.2,
+      "test_mean_sequence_macro_f1": 0.6831485918473333
+    }
+  }
+}

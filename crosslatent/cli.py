@@ -100,6 +100,13 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     predict.add_argument("--activations", type=Path, required=True)
     predict.add_argument("--dictionary-id", required=True)
     predict.add_argument("--output", type=Path, required=True)
+    steps = commands.add_parser("predict-steps", help="export final-coefficient cumulative prediction trajectories")
+    steps.add_argument("--model", type=Path, required=True)
+    steps.add_argument("--activations", type=Path, required=True)
+    steps.add_argument("--dictionary-id", required=True)
+    steps.add_argument("--lengths", type=Path, help="integer NPY token counts per sequence; default: one sequence")
+    steps.add_argument("--sequence-ids", type=Path, help="JSON list of sequence identifiers")
+    steps.add_argument("--output", type=Path, required=True, help="new output directory")
     legacy = commands.add_parser("import-legacy", help="convert an explicitly chosen historical combination JSON")
     legacy.add_argument("--input", type=Path, required=True)
     legacy.add_argument("--feature", required=True)
@@ -148,6 +155,13 @@ def main(argv: list[str] | None = None) -> None:
         with args.output.open("wb") as handle:
             np.save(handle, prediction)
         payload = {"tokens": len(prediction), "output": str(args.output)}
+    elif args.command == "predict-steps":
+        from .trajectory import export_steps
+        payload = export_steps(
+            LinearReadout.load(args.model), np.load(args.activations, mmap_mode="r", allow_pickle=False),
+            args.output, dictionary_id=args.dictionary_id,
+            lengths=np.load(args.lengths, allow_pickle=False) if args.lengths else None,
+            sequence_ids=json.loads(args.sequence_ids.read_text()) if args.sequence_ids else None)
     elif args.command == "import-legacy":
         if args.task == "binary" and args.threshold is None:
             raise ValueError("supply the validation-frozen --threshold; training best_threshold is not used")

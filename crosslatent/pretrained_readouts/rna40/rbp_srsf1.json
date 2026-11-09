@@ -1,0 +1,57 @@
+{
+  "schema": "latent-readout/v1",
+  "latent_ids": [
+    2792,
+    8178,
+    4405,
+    3540,
+    5156,
+    6816,
+    358,
+    134,
+    1251,
+    6601
+  ],
+  "coefficients": [
+    0.6777863624307022,
+    -0.8027680726469816,
+    0.6831278364131355,
+    0.38054350920894997,
+    0.5099746581477685,
+    0.6817844324067326,
+    -0.9297607940632738,
+    0.45252086248490736,
+    -1.2440871040562074,
+    0.31586018971944235
+  ],
+  "intercept": 0.26685938081660837,
+  "n_features": 9216,
+  "dictionary_id": "study:rna40:sha256:ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+  "task": "binary",
+  "threshold": 0.35,
+  "metadata": {
+    "suite": "rna40",
+    "task_id": "rbp_srsf1",
+    "position_annotation": "SRSF1",
+    "feature_index_base": 0,
+    "feature_count": 10,
+    "sae_checkpoint_sha256": "ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+    "threshold_source": "validation selection_curve.csv; never the training JSON best_threshold",
+    "validation_mean_sequence_macro_f1": 0.5317775540145145,
+    "test_mean_sequence_macro_f1": 0.5327540100339604,
+    "source_json": "inputs/fig/paper_figures/fig3/biological100/results/rna40_latent10/rbp_srsf1/rbp_srsf1_SRSF1_latent10_10.json",
+    "source_json_sha256": "e568ada1c4725a1207192eee0fbb44206009cd92666c302650de39597bd08ab0",
+    "summary_json": "inputs/fig/paper_figures/fig3/biological100/evaluation/rna40_valid_test/rbp_srsf1/summary.json",
+    "summary_sha256": "c70676e3f60f5526b368c3073bec3ce088684c97130c1067ef84f08d9c1af0da",
+    "selection_curve_sha256": "0f1bd7a6a9ce5fa508098789acfb7cab48c60efdd3d1fb6ac0477a6e04d5e789",
+    "prediction": "intercept + activations[:, latent_ids] @ coefficients; positive if score >= threshold",
+    "selection_rule": "max valid macro F1; ties: smaller K, then lower threshold",
+    "best_single_baseline": {
+      "latent_id": 8707,
+      "coefficient": 1.0,
+      "intercept": 0.0,
+      "threshold": 0.4,
+      "test_mean_sequence_macro_f1": 0.4992193410886064
+    }
+  }
+}

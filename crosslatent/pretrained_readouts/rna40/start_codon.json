@@ -1,0 +1,55 @@
+{
+  "schema": "latent-readout/v1",
+  "latent_ids": [
+    7053,
+    1381,
+    2432,
+    135,
+    139,
+    6245,
+    7913,
+    7635,
+    710
+  ],
+  "coefficients": [
+    0.18420873923220343,
+    0.15326938570888038,
+    0.1500943688768029,
+    0.15579675420884154,
+    0.17035705658102177,
+    0.15579363865828244,
+    0.13051013696823632,
+    0.11895322917262019,
+    0.11276481720439516
+  ],
+  "intercept": -0.004541838766910962,
+  "n_features": 9216,
+  "dictionary_id": "study:rna40:sha256:ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+  "task": "binary",
+  "threshold": 0.1,
+  "metadata": {
+    "suite": "rna40",
+    "task_id": "start_codon",
+    "position_annotation": "start_codon",
+    "feature_index_base": 0,
+    "feature_count": 9,
+    "sae_checkpoint_sha256": "ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+    "threshold_source": "validation selection_curve.csv; never the training JSON best_threshold",
+    "validation_mean_sequence_macro_f1": 0.6090656871823135,
+    "test_mean_sequence_macro_f1": 0.6048539218583362,
+    "source_json": "inputs/fig/paper_figures/fig3/biological100/results/rna40_latent10/start_codon/start_codon_start_codon_latent10_9.json",
+    "source_json_sha256": "e2f31c48f1f4128c10e3ae3c12afaae0bfccb26015de354c3360d7769bb7c7da",
+    "summary_json": "inputs/fig/paper_figures/fig3/biological100/evaluation/rna40_valid_test/start_codon/summary.json",
+    "summary_sha256": "5bf6c626a79a1a9a54cc5d3c3f3167d97d104fea494106abd15b34dad4371fb6",
+    "selection_curve_sha256": "124d7896a2fc173f1c796cf395ba70cc6f7af57796506dd2bffa79453a41ee21",
+    "prediction": "intercept + activations[:, latent_ids] @ coefficients; positive if score >= threshold",
+    "selection_rule": "max valid macro F1; ties: smaller K, then lower threshold",
+    "best_single_baseline": {
+      "latent_id": 7053,
+      "coefficient": 1.0,
+      "intercept": 0.0,
+      "threshold": 0.2,
+      "test_mean_sequence_macro_f1": 0.5768288446366165
+    }
+  }
+}

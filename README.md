@@ -1,107 +1,96 @@
 # CrossLatent
 
-CrossLatent discovers shared constituents of biological concepts through sparse combinations of fixed SAE features. Orthogonal residual selection builds a concept readout; independently fitted readouts can then be compared to identify shared latents, examine position responses and test decoder-direction effects on a supplied model output head.
+CrossLatent progressively combines sparse autoencoder (SAE) features that provide additional predictive information and traces feature contributions to predictions at individual sequence positions. This repository provides the implementation and saved task predictors for *CrossLatent traces the assembly and reuse of sparse features in biological sequence models*. Software version: **0.1.4**.
 
-## Scope
+## Install
 
-This repository provides the core algorithms and portable interfaces: residual feature selection, validation-based budget/threshold selection, frozen prediction, leave-one-latent-out refitting, shared-set analysis, position profiles and readout interventions. It also includes fixed-SAE encoding adapters and independent Top-K/best-single comparisons. It does not contain paper figures, frozen paper-result snapshots, raw biological data or model weights.
-
-InterPLM, ERNIE-RNA and Evo 2 are external projects assumed to be available in the user's environment when required. CrossLatent does not install or download them. For the synthetic example and activation-based learning, no language-model checkpoint is required.
-
-## Installation
-
-Python 3.10 or newer. Use an isolated environment with your required model dependencies available:
+Use Python 3.10 or newer and an isolated environment:
 
 ```sh
-python -m pip install .
-crosslatent --help
-```
-
-For development, use `python -m pip install -e '.[test]'`. If all declared dependencies are already installed, `python -m pip install --no-deps .` preserves them. Direct dependencies are NumPy, pandas, PyTorch, tqdm and einops.
-
-## Minimal working example
-
-```sh
+git clone https://github.com/Shuo-Zhan/CrossLatent.git
+cd CrossLatent
+python -m venv .venv
+. .venv/bin/activate
+python -m pip install -e '.[test]'
 crosslatent demo --output ./demo
-crosslatent run --config ./demo/run.json
+python -m pytest tests -q
 ```
 
-This seeded CPU example generates synthetic activations, fits a readout, selects its budget and threshold on validation data and evaluates a held-out test set. It also compares a single feature. Outputs include three NPZ files, a portable JSON configuration, model JSON and metrics. It is an interface demonstration, not biological evidence. Configuration paths resolve relative to the configuration file, so the entire demo directory can be moved.
+The seeded CPU demo uses synthetic activations and requires no downloaded model. It checks the software interface; its scores are not biological results.
 
-## Use your own activations
+The [tested environment](docs/ENVIRONMENT.md) records the Python and package versions used for release validation.
 
-Each train/validation/test NPZ file contains:
+## The 100 saved task predictors
 
-| Field | Shape | Meaning |
-|---|---|---|
-| `activations` | N × M | SAE activations with the same dictionary column order |
-| `labels` | N | Binary 0/1 labels or continuous values |
-| `lengths` | Number of sequences | Positive token counts summing to N |
-| `dictionary_id` | Scalar string | Fixed checkpoint and encoding-protocol identifier |
-| `sequence_ids` | Optional string vector | Unique sequence identifiers for split-overlap checks |
+**All 60 protein-domain and 40 RNA annotation predictors are included in this repository**, under `crosslatent/pretrained_readouts/`. Each task has a directly loadable final model with zero-based SAE feature indices, signed coefficients, intercept, validation-selected feature count and threshold. The accompanying trajectories preserve the independently fitted models for all feature counts K=1–10. These small JSON files are also included in the installed wheel.
 
-Remove padding and special tokens before aligning labels. Dictionary identifiers must match across splits; sequence IDs do not replace sequence-level deduplication or homology separation.
+```python
+from importlib.resources import files
+from crosslatent import LinearReadout
+
+root = files('crosslatent').joinpath('pretrained_readouts')
+model = LinearReadout.load(root.joinpath('protein60/PF13545.json'))
+# activations: [sequence positions, 10240], from the matching fixed protein SAE
+scores = model.predict(activations)
+positive = scores >= model.threshold
+```
+
+`index.csv` and `index.json` enumerate every task. RNA dictionaries contain 9,216 features. Feature identities and activation scales must match the checkpoint and encoding procedure recorded in each model's metadata. Saved test scores are descriptive results, not inputs for selecting a model.
+
+See [saved predictor guide](docs/PRETRAINED_READOUTS.md). The final operating threshold comes from held-out validation, not the `best_threshold` field in historical training JSONs.
+
+## Fit your own data
 
 ```python
 from crosslatent import ActivationDataset, fit, evaluate
 
-train = ActivationDataset.load("train.npz")
-valid = ActivationDataset.load("valid.npz")
-test = ActivationDataset.load("test.npz")
-model = fit(train, valid, max_latents=10, task="binary")
-model.save("model.json")
+train = ActivationDataset.load('train.npz')
+valid = ActivationDataset.load('valid.npz')
+test = ActivationDataset.load('test.npz')
+model = fit(train, valid, max_latents=10, task='binary')
+model.save('model.json')
 print(evaluate(model, test))
 ```
 
-Equivalent commands:
+Each NPZ contains `activations`, `labels`, `lengths`, and `dictionary_id`. Optional `sequence_ids` enable ID-overlap checks. Align sequence positions and labels, exclude special/padding tokens, and establish sequence separation before fitting. Selection uses training data; feature count and binary threshold use validation; test evaluation uses fixed settings. Continuous tasks use `task='continuous'` and the linear score directly.
+
+## Data and model downloads
+
+| Archive | Contents | Download |
+|---|---|---|
+| `CrossLatent-study-data.zip` (222.4 MB) | Study inputs, partitions, numerical results, source tables and saved predictors | [Google Drive](https://drive.google.com/file/d/1vw_L7JU67ECAWKoeZmfX9KRCN_U0xn1q/view?usp=drive_link) |
+| `CrossLatent-rna-sae.zip` (52.6 MB) | Authors' RNA SAE parameter file and loading metadata | [Google Drive](https://drive.google.com/file/d/1b2zQmqIVEXz0Nag2CQyxXXQTWU1RsiXu/view?usp=drive_link) |
+
+See [checksums and extraction instructions](docs/DOWNLOADS.md). Both archives were downloaded without signing into a Google account during release validation and matched the prepared release files byte for byte. Google may display a large-file scan notice; select **Download anyway** to retrieve the ZIP.
+
+## Reproduce the paper
+
+Extract `CrossLatent-study-data` alongside this code directory:
 
 ```sh
-crosslatent fit --train train.npz --valid valid.npz --max-latents 10 --output model.json
-crosslatent evaluate --model model.json --test test.npz --output metrics.json
-crosslatent refit --model model.json --train train.npz --valid valid.npz --test test.npz --output refit.json
+python tools/verify_data.py --data-root ../CrossLatent-study-data
+python tools/verify_readouts.py --data-root ../CrossLatent-study-data
 ```
 
-Use `--task continuous` for pooled R². Binary scores are raw linear scores, with validation thresholds in 0–1 at steps of 0.05; the metric averages class-macro F1 within each sequence and then across sequences. `--method topk` ranks independent training gains before joint fitting; `--method best-single` selects one training feature. No screened-Lasso solver is included.
+The data archive provides final partitions, result tables, frozen settings, compact selected-feature responses for 800 additional proteins, and numerical source data underlying the article figures. Verification checks the supplied files and saved numerical evidence without base-model inference.
 
-The default fit uses validation to choose K. For a fixed-budget constituent analysis, pass `--fixed-budget`; validation then chooses only the binary threshold. Numerical degeneracy can yield fewer unique features than the requested budget. Greedy selection does not guarantee the globally optimal K-feature subset.
+[Reproduction guide](docs/REPRODUCING.md) distinguishes saved-result verification from full model inference/training. [Model downloads](docs/MODELS_AND_DATA.md) identify the exact public files. The authors' RNA SAE parameters and loading metadata are in the separate `CrossLatent-rna-sae` archive. Public base-model and external-SAE weights are obtained from their authors' links.
 
-## Shared features and interventions
+## Predictions and interpretation
 
-Fit each family or concept independently using the same SAE dictionary, then compare:
+`crosslatent predict-steps` exports contributions and intermediate predictions with fixed final coefficients. This differs from the separately refitted K=1–10 models supplied for each benchmark task. [Stepwise prediction guide](docs/STEPWISE_PREDICTION.md) explains the distinction.
 
-```sh
-crosslatent shared --models family_a.json family_b.json --output shared.json
-```
+`crosslatent shared` compares selected features within one fixed dictionary. `crosslatent.interpretation` supports positional profiles, feature removal/refitting and subtraction of SAE reconstruction contributions. `crosslatent.raw_probes` supplies the Raw-OLS and Raw-Ridge controls. See [API](docs/CORE_API.md).
 
-`crosslatent.interpretation` provides `shared_latents`, `position_profile`, `ablate_latents` and `readout_effects`. The intervention subtracts selected activation-weighted decoder directions from the original hidden state and uses the caller's frozen output head. It preserves the SAE reconstruction residual. Position labels and pretrained models are supplied by the caller. See [core API details](docs/CORE_API.md).
+## Code, data and attribution
 
-## Encode existing embeddings
+- `crosslatent/`: installable algorithm/API and the 100 saved task predictors.
+- `research/`: original extraction, training and evaluation implementations. Historical workspace defaults are provenance and need explicit model/input/output paths before rerunning.
+- `tools/`: portable export and validation commands.
+- `docs/`: reproduction, model sources and release notes.
 
-```sh
-crosslatent encode --embeddings embeddings.npy --kind rna --checkpoint checkpoints/rna_sae.pt --batch-tokens 128000 --device cpu --output activations.npy
-```
+Author-owned code uses [MIT](LICENSE); [third-party notices](THIRD_PARTY_NOTICES.md) retain upstream attribution. Database sequences and external weights keep their own conditions. Repository: [Shuo-Zhan/CrossLatent](https://github.com/Shuo-Zhan/CrossLatent).
 
-Supported adapters are `protein`, `rna` and `dna`. Explicit checkpoint, precision and batch settings are recorded alongside the output. BatchTopK operates across the entire encoding batch; batch composition can change activations. The adapter uses contiguous token blocks and does not recreate a historical sequence-batching protocol automatically.
+## Citation
 
-## Memory and reproducibility
-
-The NPZ interface is an in-memory workflow and creates float64 working arrays. The retained streaming engine requires caller-provided embeddings/SAE objects and explicit numerical settings; see the API documentation. A saved readout uses the name-independent `latent-readout/v1` schema. The command `import-legacy` can import an explicitly chosen prior combination JSON without following embedded machine paths.
-
-## Tests
-
-```sh
-python -m pytest tests -q
-```
-
-Tests cover selection against an independent OLS reference, split validation, relocated configurations, fixed evaluation, redundant versus unique information under refitting, BatchTopK semantics and decoder interventions. They require no downloaded model or GPU.
-
-## Data and pretrained SAE
-
-- [CrossLatent study data (~149 MB)](https://drive.google.com/file/d/1UXEZiUoYh7w9C8AQaHnPrH1HixI7DoA3/view?usp=drive_link): Processed datasets, evaluation splits, fitted readouts, and analysis results supporting the CrossLatent study, together with source metadata and file verification utilities.
-- [CrossLatent RNA SAE (~99 MB)](https://drive.google.com/file/d/1YTzhJXR1afEieFXQGArMO3jg7-1Dw1a-/view?usp=drive_link): The pretrained ERNIE-RNA sparse autoencoder checkpoint used in this study, together with its training and validation sequences, configuration, and model documentation.
-
-These archives complement the core code in this repository. Pretrained backbone models are not included and should be obtained from their respective providers.
-
-## License
-
-This source code is licensed under the MIT license found in the LICENSE file in the root directory of this source tree.
+Software citation metadata are provided in [CITATION.cff](CITATION.cff). The associated study is *CrossLatent traces the assembly and reuse of sparse features in biological sequence models*. A preprint or publication link can be added when available.

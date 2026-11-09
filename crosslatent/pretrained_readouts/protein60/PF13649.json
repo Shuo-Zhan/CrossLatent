@@ -1,0 +1,55 @@
+{
+  "schema": "latent-readout/v1",
+  "latent_ids": [
+    657,
+    6271,
+    10074,
+    1359,
+    5789,
+    4211,
+    3512,
+    3434,
+    9190
+  ],
+  "coefficients": [
+    1.711309708373942,
+    -0.7226268817026488,
+    1.3120244278757656,
+    1.4763744795311304,
+    1.3216847146793156,
+    1.1487339469144842,
+    1.2064409752132856,
+    1.5480977491510912,
+    -0.49447406708373576
+  ],
+  "intercept": 0.22640298526217092,
+  "n_features": 10240,
+  "dictionary_id": "study:protein60:sha256:e60dd1f95e46ba48d9f2033c81c6f22527332d02591ed91d154a8de6fb5fc822",
+  "task": "binary",
+  "threshold": 0.25,
+  "metadata": {
+    "suite": "protein60",
+    "task_id": "PF13649",
+    "position_annotation": "mask_target_domain",
+    "feature_index_base": 0,
+    "feature_count": 9,
+    "sae_checkpoint_sha256": "e60dd1f95e46ba48d9f2033c81c6f22527332d02591ed91d154a8de6fb5fc822",
+    "threshold_source": "validation selection_curve.csv; never the training JSON best_threshold",
+    "validation_mean_sequence_macro_f1": 0.90711227373165,
+    "test_mean_sequence_macro_f1": 0.9070240457670037,
+    "source_json": "inputs/fig/paper_figures/fig3/biological100/results/protein_domain_latent10/PF13649/PF13649_mask_target_domain_latent10_9.json",
+    "source_json_sha256": "5e5124f438d8f58da67a577ff026dde9fd0204c47a7449d491841b45e57dd607",
+    "summary_json": "inputs/fig/paper_figures/fig3/biological100/evaluation/protein60_valid_test/PF13649/summary.json",
+    "summary_sha256": "c6c04e5c65cbe6c6f3f130c78fd74c5b518f6a185b296d29fe3eeff3e82a368c",
+    "selection_curve_sha256": "84ece9e47a35443d1794c6032a65f60e5868282a36378a22e9ec9fadffe65238",
+    "prediction": "intercept + activations[:, latent_ids] @ coefficients; positive if score >= threshold",
+    "selection_rule": "max valid macro F1; ties: smaller K, then lower threshold",
+    "best_single_baseline": {
+      "latent_id": 657,
+      "coefficient": 1.0,
+      "intercept": 0.0,
+      "threshold": 0.05,
+      "test_mean_sequence_macro_f1": 0.5624459777051383
+    }
+  }
+}

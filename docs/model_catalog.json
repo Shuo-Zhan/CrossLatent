@@ -1,0 +1,63 @@
+{
+  "software_version": "0.1.4",
+  "external_models": [
+    {
+      "model": "ESM-2-650M",
+      "role": "Protein sequence model",
+      "file": "esm2_t33_650M_UR50D.pt",
+      "url": "https://dl.fbaipublicfiles.com/fair-esm/models/esm2_t33_650M_UR50D.pt",
+      "source": "https://github.com/facebookresearch/esm#available-models-and-datasets"
+    },
+    {
+      "model": "InterPLM ESM-2-650M layer-33 SAE",
+      "role": "Protein SAE; normalized feature activations",
+      "file": "layer_33/ae_normalized.pt",
+      "url": "https://huggingface.co/Elana/InterPLM-esm2-650m/blob/main/layer_33/ae_normalized.pt",
+      "source": "https://huggingface.co/Elana/InterPLM-esm2-650m/tree/main/layer_33"
+    },
+    {
+      "model": "ERNIE-RNA",
+      "role": "RNA sequence model; authors' pretrained-model download instructions",
+      "file": "Pretrained model; local analysis uses two_mlm_checkpoint/checkpoint_best.pt",
+      "url": "https://github.com/Bruce-ywj/ERNIE-RNA#access-pre-trained-models",
+      "source": "https://github.com/Bruce-ywj/ERNIE-RNA"
+    },
+    {
+      "model": "Evo 2 7B, 262k context",
+      "role": "DNA sequence model",
+      "file": "evo2_7b_262k.pt",
+      "url": "https://huggingface.co/arcinstitute/evo2_7b_262k/blob/main/evo2_7b_262k.pt",
+      "source": "https://huggingface.co/arcinstitute/evo2_7b_262k/tree/main"
+    },
+    {
+      "model": "Goodfire Evo-2-Layer-26-Mixed SAE",
+      "role": "DNA SAE; expansion 8; batch-average activation budget 64",
+      "file": "sae-layer26-mixed-expansion_8-k_64.pt",
+      "url": "https://huggingface.co/Goodfire/Evo-2-Layer-26-Mixed/blob/main/sae-layer26-mixed-expansion_8-k_64.pt",
+      "source": "https://huggingface.co/Goodfire/Evo-2-Layer-26-Mixed/tree/main"
+    }
+  ],
+  "protein_sae_sha256": "e60dd1f95e46ba48d9f2033c81c6f22527332d02591ed91d154a8de6fb5fc822",
+  "rna_sae_sha256": "ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+  "rna_normalization_status": "No new scaling applied during packaging; historical parameter-rescaling provenance remains unresolved.",
+  "source_manuscript_sha256": "47cc2e38d33e026f46b804a74ae73a73aff27bfa356c803e71b817705934aa24",
+  "article_title": "CrossLatent traces the assembly and reuse of sparse features in biological sequence models",
+  "study_archives": [
+    {
+      "file": "CrossLatent-study-data.zip",
+      "url": "https://drive.google.com/file/d/1vw_L7JU67ECAWKoeZmfX9KRCN_U0xn1q/view?usp=drive_link",
+      "file_id": "1vw_L7JU67ECAWKoeZmfX9KRCN_U0xn1q",
+      "bytes": 222371101,
+      "sha256": "41d384678cf8dd038dd6a4144e2bfa9837a35795c5dd0f3fef3afd066ab07cab",
+      "payload_files": 6096
+    },
+    {
+      "file": "CrossLatent-rna-sae.zip",
+      "url": "https://drive.google.com/file/d/1b2zQmqIVEXz0Nag2CQyxXXQTWU1RsiXu/view?usp=drive_link",
+      "file_id": "1b2zQmqIVEXz0Nag2CQyxXXQTWU1RsiXu",
+      "bytes": 52586730,
+      "sha256": "bc121277fd9f8f9ca98884901cb3f150fdf0dff9dec12fdbe488239ec8eaa84b",
+      "payload_files": 4
+    }
+  ]
+}

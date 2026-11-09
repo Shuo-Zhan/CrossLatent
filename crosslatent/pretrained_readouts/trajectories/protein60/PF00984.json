@@ -1,0 +1,417 @@
+{
+  "schema": "crosslatent-fitted-budgets/v1",
+  "suite": "protein60",
+  "task_id": "PF00984",
+  "selected_k": 10,
+  "budgets": [
+    {
+      "schema": "latent-readout/v1",
+      "latent_ids": [
+        6325
+      ],
+      "coefficients": [
+        1.56967917700662
+      ],
+      "intercept": 0.06667971446788588,
+      "n_features": 10240,
+      "dictionary_id": "study:protein60:sha256:e60dd1f95e46ba48d9f2033c81c6f22527332d02591ed91d154a8de6fb5fc822",
+      "task": "binary",
+      "threshold": 0.25,
+      "metadata": {
+        "suite": "protein60",
+        "task_id": "PF00984",
+        "position_annotation": "mask_target_domain",
+        "feature_index_base": 0,
+        "feature_count": 1,
+        "sae_checkpoint_sha256": "e60dd1f95e46ba48d9f2033c81c6f22527332d02591ed91d154a8de6fb5fc822",
+        "threshold_source": "validation selection_curve.csv; never the training JSON best_threshold",
+        "validation_mean_sequence_macro_f1": 0.9114875650104128,
+        "test_mean_sequence_macro_f1": 0.9108793687824492,
+        "source_json": "inputs/fig/paper_figures/fig3/biological100/results/protein_domain_latent10/PF00984/PF00984_mask_target_domain_latent10_1.json",
+        "source_json_sha256": "e967bb85e265b3d29ccebcf3a2c3c341b60097328291f0abc19bd90ac3713f93",
+        "summary_json": "inputs/fig/paper_figures/fig3/biological100/evaluation/protein60_valid_test/PF00984/summary.json",
+        "summary_sha256": "c03ceab7338b32bdb4d469cf130c8527f3be52c1e00c7b5d72172dbacab9af63",
+        "selection_curve_sha256": "32091e372fcbaf0d54fd2b8a2f86609c408fed408d701c381fc545197710708b",
+        "prediction": "intercept + activations[:, latent_ids] @ coefficients; positive if score >= threshold"
+      }
+    },
+    {
+      "schema": "latent-readout/v1",
+      "latent_ids": [
+        6325,
+        9254
+      ],
+      "coefficients": [
+        1.5188636367408448,
+        1.1586786197856633
+      ],
+      "intercept": -0.005188461882855208,
+      "n_features": 10240,
+      "dictionary_id": "study:protein60:sha256:e60dd1f95e46ba48d9f2033c81c6f22527332d02591ed91d154a8de6fb5fc822",
+      "task": "binary",
+      "threshold": 0.4,
+      "metadata": {
+        "suite": "protein60",
+        "task_id": "PF00984",
+        "position_annotation": "mask_target_domain",
+        "feature_index_base": 0,
+        "feature_count": 2,
+        "sae_checkpoint_sha256": "e60dd1f95e46ba48d9f2033c81c6f22527332d02591ed91d154a8de6fb5fc822",
+        "threshold_source": "validation selection_curve.csv; never the training JSON best_threshold",
+        "validation_mean_sequence_macro_f1": 0.9708586964381517,
+        "test_mean_sequence_macro_f1": 0.9745216181073117,
+        "source_json": "inputs/fig/paper_figures/fig3/biological100/results/protein_domain_latent10/PF00984/PF00984_mask_target_domain_latent10_2.json",
+        "source_json_sha256": "b10277f5505e808a727b466953d658ca33baa3e7e84fca1b7d310babe5415452",
+        "summary_json": "inputs/fig/paper_figures/fig3/biological100/evaluation/protein60_valid_test/PF00984/summary.json",
+        "summary_sha256": "c03ceab7338b32bdb4d469cf130c8527f3be52c1e00c7b5d72172dbacab9af63",
+        "selection_curve_sha256": "32091e372fcbaf0d54fd2b8a2f86609c408fed408d701c381fc545197710708b",
+        "prediction": "intercept + activations[:, latent_ids] @ coefficients; positive if score >= threshold"
+      }
+    },
+    {
+      "schema": "latent-readout/v1",
+      "latent_ids": [
+        6325,
+        9254,
+        4182
+      ],
+      "coefficients": [
+        1.4476873998360162,
+        1.1827561426749376,
+        1.2813959931454428
+      ],
+      "intercept": -0.012438298677535547,
+      "n_features": 10240,
+      "dictionary_id": "study:protein60:sha256:e60dd1f95e46ba48d9f2033c81c6f22527332d02591ed91d154a8de6fb5fc822",
+      "task": "binary",
+      "threshold": 0.4,
+      "metadata": {
+        "suite": "protein60",
+        "task_id": "PF00984",
+        "position_annotation": "mask_target_domain",
+        "feature_index_base": 0,
+        "feature_count": 3,
+        "sae_checkpoint_sha256": "e60dd1f95e46ba48d9f2033c81c6f22527332d02591ed91d154a8de6fb5fc822",
+        "threshold_source": "validation selection_curve.csv; never the training JSON best_threshold",
+        "validation_mean_sequence_macro_f1": 0.9712114481941982,
+        "test_mean_sequence_macro_f1": 0.9749107237947822,
+        "source_json": "inputs/fig/paper_figures/fig3/biological100/results/protein_domain_latent10/PF00984/PF00984_mask_target_domain_latent10_3.json",
+        "source_json_sha256": "31a78929d34a8ed5231df563b887a38bda1350ca4011e0ccd84df231f147c6df",
+        "summary_json": "inputs/fig/paper_figures/fig3/biological100/evaluation/protein60_valid_test/PF00984/summary.json",
+        "summary_sha256": "c03ceab7338b32bdb4d469cf130c8527f3be52c1e00c7b5d72172dbacab9af63",
+        "selection_curve_sha256": "32091e372fcbaf0d54fd2b8a2f86609c408fed408d701c381fc545197710708b",
+        "prediction": "intercept + activations[:, latent_ids] @ coefficients; positive if score >= threshold"
+      }
+    },
+    {
+      "schema": "latent-readout/v1",
+      "latent_ids": [
+        6325,
+        9254,
+        4182,
+        3417
+      ],
+      "coefficients": [
+        1.4273488331798398,
+        1.2190591953787777,
+        1.2710708373984063,
+        -2.58832930529644
+      ],
+      "intercept": -0.003998558509270226,
+      "n_features": 10240,
+      "dictionary_id": "study:protein60:sha256:e60dd1f95e46ba48d9f2033c81c6f22527332d02591ed91d154a8de6fb5fc822",
+      "task": "binary",
+      "threshold": 0.45,
+      "metadata": {
+        "suite": "protein60",
+        "task_id": "PF00984",
+        "position_annotation": "mask_target_domain",
+        "feature_index_base": 0,
+        "feature_count": 4,
+        "sae_checkpoint_sha256": "e60dd1f95e46ba48d9f2033c81c6f22527332d02591ed91d154a8de6fb5fc822",
+        "threshold_source": "validation selection_curve.csv; never the training JSON best_threshold",
+        "validation_mean_sequence_macro_f1": 0.9718992991823844,
+        "test_mean_sequence_macro_f1": 0.9752064908863485,
+        "source_json": "inputs/fig/paper_figures/fig3/biological100/results/protein_domain_latent10/PF00984/PF00984_mask_target_domain_latent10_4.json",
+        "source_json_sha256": "34deb55a613fcad2aa22ef619aba9074adbc3c829d96b55953f8bc59c4339f38",
+        "summary_json": "inputs/fig/paper_figures/fig3/biological100/evaluation/protein60_valid_test/PF00984/summary.json",
+        "summary_sha256": "c03ceab7338b32bdb4d469cf130c8527f3be52c1e00c7b5d72172dbacab9af63",
+        "selection_curve_sha256": "32091e372fcbaf0d54fd2b8a2f86609c408fed408d701c381fc545197710708b",
+        "prediction": "intercept + activations[:, latent_ids] @ coefficients; positive if score >= threshold"
+      }
+    },
+    {
+      "schema": "latent-readout/v1",
+      "latent_ids": [
+        6325,
+        9254,
+        4182,
+        3417,
+        3140
+      ],
+      "coefficients": [
+        1.423493027567605,
+        1.2130088305722084,
+        1.1568252150142107,
+        -2.5677960127373294,
+        7.2124075868535815
+      ],
+      "intercept": -0.004972663641569944,
+      "n_features": 10240,
+      "dictionary_id": "study:protein60:sha256:e60dd1f95e46ba48d9f2033c81c6f22527332d02591ed91d154a8de6fb5fc822",
+      "task": "binary",
+      "threshold": 0.45,
+      "metadata": {
+        "suite": "protein60",
+        "task_id": "PF00984",
+        "position_annotation": "mask_target_domain",
+        "feature_index_base": 0,
+        "feature_count": 5,
+        "sae_checkpoint_sha256": "e60dd1f95e46ba48d9f2033c81c6f22527332d02591ed91d154a8de6fb5fc822",
+        "threshold_source": "validation selection_curve.csv; never the training JSON best_threshold",
+        "validation_mean_sequence_macro_f1": 0.9732849371986864,
+        "test_mean_sequence_macro_f1": 0.9768959467850917,
+        "source_json": "inputs/fig/paper_figures/fig3/biological100/results/protein_domain_latent10/PF00984/PF00984_mask_target_domain_latent10_5.json",
+        "source_json_sha256": "ddc124f1ebc4e6a11c34865209c1c0c75390d2e568c81389870d8eca60d62eae",
+        "summary_json": "inputs/fig/paper_figures/fig3/biological100/evaluation/protein60_valid_test/PF00984/summary.json",
+        "summary_sha256": "c03ceab7338b32bdb4d469cf130c8527f3be52c1e00c7b5d72172dbacab9af63",
+        "selection_curve_sha256": "32091e372fcbaf0d54fd2b8a2f86609c408fed408d701c381fc545197710708b",
+        "prediction": "intercept + activations[:, latent_ids] @ coefficients; positive if score >= threshold"
+      }
+    },
+    {
+      "schema": "latent-readout/v1",
+      "latent_ids": [
+        6325,
+        9254,
+        4182,
+        3417,
+        3140,
+        1479
+      ],
+      "coefficients": [
+        1.4221379004922872,
+        1.2327323242470454,
+        1.156028782564941,
+        -2.5313122537780632,
+        7.1816706621949615,
+        -1.1028963158783995
+      ],
+      "intercept": -0.00412383000157325,
+      "n_features": 10240,
+      "dictionary_id": "study:protein60:sha256:e60dd1f95e46ba48d9f2033c81c6f22527332d02591ed91d154a8de6fb5fc822",
+      "task": "binary",
+      "threshold": 0.45,
+      "metadata": {
+        "suite": "protein60",
+        "task_id": "PF00984",
+        "position_annotation": "mask_target_domain",
+        "feature_index_base": 0,
+        "feature_count": 6,
+        "sae_checkpoint_sha256": "e60dd1f95e46ba48d9f2033c81c6f22527332d02591ed91d154a8de6fb5fc822",
+        "threshold_source": "validation selection_curve.csv; never the training JSON best_threshold",
+        "validation_mean_sequence_macro_f1": 0.9755844577051338,
+        "test_mean_sequence_macro_f1": 0.9786483103773339,
+        "source_json": "inputs/fig/paper_figures/fig3/biological100/results/protein_domain_latent10/PF00984/PF00984_mask_target_domain_latent10_6.json",
+        "source_json_sha256": "add0306d36d6eb674ec676bf3793bfdb4e96006f291b5ac2328569f203903d9e",
+        "summary_json": "inputs/fig/paper_figures/fig3/biological100/evaluation/protein60_valid_test/PF00984/summary.json",
+        "summary_sha256": "c03ceab7338b32bdb4d469cf130c8527f3be52c1e00c7b5d72172dbacab9af63",
+        "selection_curve_sha256": "32091e372fcbaf0d54fd2b8a2f86609c408fed408d701c381fc545197710708b",
+        "prediction": "intercept + activations[:, latent_ids] @ coefficients; positive if score >= threshold"
+      }
+    },
+    {
+      "schema": "latent-readout/v1",
+      "latent_ids": [
+        6325,
+        9254,
+        4182,
+        3417,
+        3140,
+        1479,
+        1828
+      ],
+      "coefficients": [
+        1.4291444315721964,
+        1.2230249138751343,
+        1.1365696432710455,
+        -2.5632894281500826,
+        7.117206747663707,
+        -1.1067135673652084,
+        -1.8413656990126288
+      ],
+      "intercept": 0.00016568790917098123,
+      "n_features": 10240,
+      "dictionary_id": "study:protein60:sha256:e60dd1f95e46ba48d9f2033c81c6f22527332d02591ed91d154a8de6fb5fc822",
+      "task": "binary",
+      "threshold": 0.4,
+      "metadata": {
+        "suite": "protein60",
+        "task_id": "PF00984",
+        "position_annotation": "mask_target_domain",
+        "feature_index_base": 0,
+        "feature_count": 7,
+        "sae_checkpoint_sha256": "e60dd1f95e46ba48d9f2033c81c6f22527332d02591ed91d154a8de6fb5fc822",
+        "threshold_source": "validation selection_curve.csv; never the training JSON best_threshold",
+        "validation_mean_sequence_macro_f1": 0.9770655129085702,
+        "test_mean_sequence_macro_f1": 0.9807573106572726,
+        "source_json": "inputs/fig/paper_figures/fig3/biological100/results/protein_domain_latent10/PF00984/PF00984_mask_target_domain_latent10_7.json",
+        "source_json_sha256": "3743618eb86ffea82ca64c48c2e01b7482dee0998d68269711f8ee6ecf510f2b",
+        "summary_json": "inputs/fig/paper_figures/fig3/biological100/evaluation/protein60_valid_test/PF00984/summary.json",
+        "summary_sha256": "c03ceab7338b32bdb4d469cf130c8527f3be52c1e00c7b5d72172dbacab9af63",
+        "selection_curve_sha256": "32091e372fcbaf0d54fd2b8a2f86609c408fed408d701c381fc545197710708b",
+        "prediction": "intercept + activations[:, latent_ids] @ coefficients; positive if score >= threshold"
+      }
+    },
+    {
+      "schema": "latent-readout/v1",
+      "latent_ids": [
+        6325,
+        9254,
+        4182,
+        3417,
+        3140,
+        1479,
+        1828,
+        769
+      ],
+      "coefficients": [
+        1.4182057206922911,
+        1.2280601920479737,
+        1.0995834752140756,
+        -2.542526259327559,
+        7.026075898529909,
+        -1.1038506581497367,
+        -1.8677218273093525,
+        0.6966660933687083
+      ],
+      "intercept": -0.0024581081015897614,
+      "n_features": 10240,
+      "dictionary_id": "study:protein60:sha256:e60dd1f95e46ba48d9f2033c81c6f22527332d02591ed91d154a8de6fb5fc822",
+      "task": "binary",
+      "threshold": 0.4,
+      "metadata": {
+        "suite": "protein60",
+        "task_id": "PF00984",
+        "position_annotation": "mask_target_domain",
+        "feature_index_base": 0,
+        "feature_count": 8,
+        "sae_checkpoint_sha256": "e60dd1f95e46ba48d9f2033c81c6f22527332d02591ed91d154a8de6fb5fc822",
+        "threshold_source": "validation selection_curve.csv; never the training JSON best_threshold",
+        "validation_mean_sequence_macro_f1": 0.9801053335231525,
+        "test_mean_sequence_macro_f1": 0.9824874832928043,
+        "source_json": "inputs/fig/paper_figures/fig3/biological100/results/protein_domain_latent10/PF00984/PF00984_mask_target_domain_latent10_8.json",
+        "source_json_sha256": "801df7c53de1fdbe0107ae0a34ff23d6de45301460d06e01ab472e1aede527bc",
+        "summary_json": "inputs/fig/paper_figures/fig3/biological100/evaluation/protein60_valid_test/PF00984/summary.json",
+        "summary_sha256": "c03ceab7338b32bdb4d469cf130c8527f3be52c1e00c7b5d72172dbacab9af63",
+        "selection_curve_sha256": "32091e372fcbaf0d54fd2b8a2f86609c408fed408d701c381fc545197710708b",
+        "prediction": "intercept + activations[:, latent_ids] @ coefficients; positive if score >= threshold"
+      }
+    },
+    {
+      "schema": "latent-readout/v1",
+      "latent_ids": [
+        6325,
+        9254,
+        4182,
+        3417,
+        3140,
+        1479,
+        1828,
+        769,
+        513
+      ],
+      "coefficients": [
+        1.409587471994464,
+        1.214464158208704,
+        1.0678191752083692,
+        -2.501752675096982,
+        7.015767062673987,
+        -1.0894520365278926,
+        -1.8445635562045093,
+        0.7022234433179838,
+        3.130879451058567
+      ],
+      "intercept": -0.0035116939630223565,
+      "n_features": 10240,
+      "dictionary_id": "study:protein60:sha256:e60dd1f95e46ba48d9f2033c81c6f22527332d02591ed91d154a8de6fb5fc822",
+      "task": "binary",
+      "threshold": 0.4,
+      "metadata": {
+        "suite": "protein60",
+        "task_id": "PF00984",
+        "position_annotation": "mask_target_domain",
+        "feature_index_base": 0,
+        "feature_count": 9,
+        "sae_checkpoint_sha256": "e60dd1f95e46ba48d9f2033c81c6f22527332d02591ed91d154a8de6fb5fc822",
+        "threshold_source": "validation selection_curve.csv; never the training JSON best_threshold",
+        "validation_mean_sequence_macro_f1": 0.9805931676525217,
+        "test_mean_sequence_macro_f1": 0.9827245063828234,
+        "source_json": "inputs/fig/paper_figures/fig3/biological100/results/protein_domain_latent10/PF00984/PF00984_mask_target_domain_latent10_9.json",
+        "source_json_sha256": "e2f573492a6d7023698796073291503cacc26cd6065d3739bcbe541a5717e36f",
+        "summary_json": "inputs/fig/paper_figures/fig3/biological100/evaluation/protein60_valid_test/PF00984/summary.json",
+        "summary_sha256": "c03ceab7338b32bdb4d469cf130c8527f3be52c1e00c7b5d72172dbacab9af63",
+        "selection_curve_sha256": "32091e372fcbaf0d54fd2b8a2f86609c408fed408d701c381fc545197710708b",
+        "prediction": "intercept + activations[:, latent_ids] @ coefficients; positive if score >= threshold"
+      }
+    },
+    {
+      "schema": "latent-readout/v1",
+      "latent_ids": [
+        6325,
+        9254,
+        4182,
+        3417,
+        3140,
+        1479,
+        1828,
+        769,
+        513,
+        9039
+      ],
+      "coefficients": [
+        1.3945940551371623,
+        1.2170196134006739,
+        1.0587655641179872,
+        -2.1245982785898807,
+        6.942796270551277,
+        -1.099567964217225,
+        -1.886390467663397,
+        0.6903072345337739,
+        3.0720570387778605,
+        -0.17917496921019388
+      ],
+      "intercept": 0.005642572624260668,
+      "n_features": 10240,
+      "dictionary_id": "study:protein60:sha256:e60dd1f95e46ba48d9f2033c81c6f22527332d02591ed91d154a8de6fb5fc822",
+      "task": "binary",
+      "threshold": 0.45,
+      "metadata": {
+        "suite": "protein60",
+        "task_id": "PF00984",
+        "position_annotation": "mask_target_domain",
+        "feature_index_base": 0,
+        "feature_count": 10,
+        "sae_checkpoint_sha256": "e60dd1f95e46ba48d9f2033c81c6f22527332d02591ed91d154a8de6fb5fc822",
+        "threshold_source": "validation selection_curve.csv; never the training JSON best_threshold",
+        "validation_mean_sequence_macro_f1": 0.9812582441042406,
+        "test_mean_sequence_macro_f1": 0.9838930568921866,
+        "source_json": "inputs/fig/paper_figures/fig3/biological100/results/protein_domain_latent10/PF00984/PF00984_mask_target_domain_latent10_10.json",
+        "source_json_sha256": "2f0ac3371a9e7576d46a4fc25c9e1fc43b2bb11889a8ada49432585369bb2cf0",
+        "summary_json": "inputs/fig/paper_figures/fig3/biological100/evaluation/protein60_valid_test/PF00984/summary.json",
+        "summary_sha256": "c03ceab7338b32bdb4d469cf130c8527f3be52c1e00c7b5d72172dbacab9af63",
+        "selection_curve_sha256": "32091e372fcbaf0d54fd2b8a2f86609c408fed408d701c381fc545197710708b",
+        "prediction": "intercept + activations[:, latent_ids] @ coefficients; positive if score >= threshold",
+        "selection_rule": "max valid macro F1; ties: smaller K, then lower threshold",
+        "best_single_baseline": {
+          "latent_id": 6325,
+          "coefficient": 1.0,
+          "intercept": 0.0,
+          "threshold": 0.1,
+          "test_mean_sequence_macro_f1": 0.9122997056978552
+        }
+      }
+    }
+  ],
+  "note": "Each K has its independently refitted coefficients and validation-selected threshold. This is distinct from truncating the final model with frozen coefficients."
+}

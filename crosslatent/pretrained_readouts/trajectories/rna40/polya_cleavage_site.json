@@ -1,0 +1,417 @@
+{
+  "schema": "crosslatent-fitted-budgets/v1",
+  "suite": "rna40",
+  "task_id": "polya_cleavage_site",
+  "selected_k": 1,
+  "budgets": [
+    {
+      "schema": "latent-readout/v1",
+      "latent_ids": [
+        1028
+      ],
+      "coefficients": [
+        0.051867428537748804
+      ],
+      "intercept": 0.0019766227271578196,
+      "n_features": 9216,
+      "dictionary_id": "study:rna40:sha256:ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+      "task": "binary",
+      "threshold": 0.05,
+      "metadata": {
+        "suite": "rna40",
+        "task_id": "polya_cleavage_site",
+        "position_annotation": "polya_cleavage_site",
+        "feature_index_base": 0,
+        "feature_count": 1,
+        "sae_checkpoint_sha256": "ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+        "threshold_source": "validation selection_curve.csv; never the training JSON best_threshold",
+        "validation_mean_sequence_macro_f1": 0.49937578027465307,
+        "test_mean_sequence_macro_f1": 0.49937578027465307,
+        "source_json": "inputs/fig/paper_figures/fig3/biological100/results/rna40_latent10/polya_cleavage_site/polya_cleavage_site_polya_cleavage_site_latent10_1.json",
+        "source_json_sha256": "465dd03225530ac89baf6f1adce1bd5c6ce6d9d273add711267ff9a3e68a04b9",
+        "summary_json": "inputs/fig/paper_figures/fig3/biological100/evaluation/rna40_valid_test/polya_cleavage_site/summary.json",
+        "summary_sha256": "ee344dcf3fac9cdc471343779bba0182cf5c410610e92f76da29b70b071cc5a2",
+        "selection_curve_sha256": "72dd0fb8178a89f58b4faecc321fd81c90efd07dd81873ab11a2bf86b89fa5e7",
+        "prediction": "intercept + activations[:, latent_ids] @ coefficients; positive if score >= threshold",
+        "selection_rule": "max valid macro F1; ties: smaller K, then lower threshold",
+        "best_single_baseline": {
+          "latent_id": 7166,
+          "coefficient": 1.0,
+          "intercept": 0.0,
+          "threshold": 0.2,
+          "test_mean_sequence_macro_f1": 0.5075588515378635
+        }
+      }
+    },
+    {
+      "schema": "latent-readout/v1",
+      "latent_ids": [
+        1028,
+        2236
+      ],
+      "coefficients": [
+        0.04924050265448234,
+        -0.0018553827066132417
+      ],
+      "intercept": 0.0029843752368749763,
+      "n_features": 9216,
+      "dictionary_id": "study:rna40:sha256:ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+      "task": "binary",
+      "threshold": 0.05,
+      "metadata": {
+        "suite": "rna40",
+        "task_id": "polya_cleavage_site",
+        "position_annotation": "polya_cleavage_site",
+        "feature_index_base": 0,
+        "feature_count": 2,
+        "sae_checkpoint_sha256": "ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+        "threshold_source": "validation selection_curve.csv; never the training JSON best_threshold",
+        "validation_mean_sequence_macro_f1": 0.49937578027465307,
+        "test_mean_sequence_macro_f1": 0.49937578027465307,
+        "source_json": "inputs/fig/paper_figures/fig3/biological100/results/rna40_latent10/polya_cleavage_site/polya_cleavage_site_polya_cleavage_site_latent10_2.json",
+        "source_json_sha256": "2718e81d3d7ce9c54c037c4a114c53d0a5794482af4c0b1e207a4398d5c92c4b",
+        "summary_json": "inputs/fig/paper_figures/fig3/biological100/evaluation/rna40_valid_test/polya_cleavage_site/summary.json",
+        "summary_sha256": "ee344dcf3fac9cdc471343779bba0182cf5c410610e92f76da29b70b071cc5a2",
+        "selection_curve_sha256": "72dd0fb8178a89f58b4faecc321fd81c90efd07dd81873ab11a2bf86b89fa5e7",
+        "prediction": "intercept + activations[:, latent_ids] @ coefficients; positive if score >= threshold"
+      }
+    },
+    {
+      "schema": "latent-readout/v1",
+      "latent_ids": [
+        1028,
+        2236,
+        7178
+      ],
+      "coefficients": [
+        0.04788363611509184,
+        -0.002036045283287267,
+        0.03547306620660627
+      ],
+      "intercept": 0.0026987167693111073,
+      "n_features": 9216,
+      "dictionary_id": "study:rna40:sha256:ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+      "task": "binary",
+      "threshold": 0.05,
+      "metadata": {
+        "suite": "rna40",
+        "task_id": "polya_cleavage_site",
+        "position_annotation": "polya_cleavage_site",
+        "feature_index_base": 0,
+        "feature_count": 3,
+        "sae_checkpoint_sha256": "ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+        "threshold_source": "validation selection_curve.csv; never the training JSON best_threshold",
+        "validation_mean_sequence_macro_f1": 0.49937578027465307,
+        "test_mean_sequence_macro_f1": 0.49937578027465307,
+        "source_json": "inputs/fig/paper_figures/fig3/biological100/results/rna40_latent10/polya_cleavage_site/polya_cleavage_site_polya_cleavage_site_latent10_3.json",
+        "source_json_sha256": "09ebf4c1948bbf0cd081c010bbd691d4ed14c6997a07d49e217552895928b53d",
+        "summary_json": "inputs/fig/paper_figures/fig3/biological100/evaluation/rna40_valid_test/polya_cleavage_site/summary.json",
+        "summary_sha256": "ee344dcf3fac9cdc471343779bba0182cf5c410610e92f76da29b70b071cc5a2",
+        "selection_curve_sha256": "72dd0fb8178a89f58b4faecc321fd81c90efd07dd81873ab11a2bf86b89fa5e7",
+        "prediction": "intercept + activations[:, latent_ids] @ coefficients; positive if score >= threshold"
+      }
+    },
+    {
+      "schema": "latent-readout/v1",
+      "latent_ids": [
+        1028,
+        2236,
+        7178,
+        5904
+      ],
+      "coefficients": [
+        0.043845458429112576,
+        -0.001844148276224783,
+        0.035347342384106833,
+        0.024919912259940155
+      ],
+      "intercept": 0.002307508960812691,
+      "n_features": 9216,
+      "dictionary_id": "study:rna40:sha256:ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+      "task": "binary",
+      "threshold": 0.05,
+      "metadata": {
+        "suite": "rna40",
+        "task_id": "polya_cleavage_site",
+        "position_annotation": "polya_cleavage_site",
+        "feature_index_base": 0,
+        "feature_count": 4,
+        "sae_checkpoint_sha256": "ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+        "threshold_source": "validation selection_curve.csv; never the training JSON best_threshold",
+        "validation_mean_sequence_macro_f1": 0.49937578027465307,
+        "test_mean_sequence_macro_f1": 0.49937578027465307,
+        "source_json": "inputs/fig/paper_figures/fig3/biological100/results/rna40_latent10/polya_cleavage_site/polya_cleavage_site_polya_cleavage_site_latent10_4.json",
+        "source_json_sha256": "c717954cb1c5a47ba6a7c3c27cbcd159597789433507a82713ab5e390b00b3f7",
+        "summary_json": "inputs/fig/paper_figures/fig3/biological100/evaluation/rna40_valid_test/polya_cleavage_site/summary.json",
+        "summary_sha256": "ee344dcf3fac9cdc471343779bba0182cf5c410610e92f76da29b70b071cc5a2",
+        "selection_curve_sha256": "72dd0fb8178a89f58b4faecc321fd81c90efd07dd81873ab11a2bf86b89fa5e7",
+        "prediction": "intercept + activations[:, latent_ids] @ coefficients; positive if score >= threshold"
+      }
+    },
+    {
+      "schema": "latent-readout/v1",
+      "latent_ids": [
+        1028,
+        2236,
+        7178,
+        5904,
+        7870
+      ],
+      "coefficients": [
+        0.040520137086318526,
+        -0.0016379541336106022,
+        0.03535086787645483,
+        0.02679370947584456,
+        0.02406306432712545
+      ],
+      "intercept": 0.001976185081785411,
+      "n_features": 9216,
+      "dictionary_id": "study:rna40:sha256:ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+      "task": "binary",
+      "threshold": 0.05,
+      "metadata": {
+        "suite": "rna40",
+        "task_id": "polya_cleavage_site",
+        "position_annotation": "polya_cleavage_site",
+        "feature_index_base": 0,
+        "feature_count": 5,
+        "sae_checkpoint_sha256": "ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+        "threshold_source": "validation selection_curve.csv; never the training JSON best_threshold",
+        "validation_mean_sequence_macro_f1": 0.49937578027465307,
+        "test_mean_sequence_macro_f1": 0.49937578027465307,
+        "source_json": "inputs/fig/paper_figures/fig3/biological100/results/rna40_latent10/polya_cleavage_site/polya_cleavage_site_polya_cleavage_site_latent10_5.json",
+        "source_json_sha256": "97213db6a2053df2de91550dcc44c37e3e70925ef8b9de4791da97953870118a",
+        "summary_json": "inputs/fig/paper_figures/fig3/biological100/evaluation/rna40_valid_test/polya_cleavage_site/summary.json",
+        "summary_sha256": "ee344dcf3fac9cdc471343779bba0182cf5c410610e92f76da29b70b071cc5a2",
+        "selection_curve_sha256": "72dd0fb8178a89f58b4faecc321fd81c90efd07dd81873ab11a2bf86b89fa5e7",
+        "prediction": "intercept + activations[:, latent_ids] @ coefficients; positive if score >= threshold"
+      }
+    },
+    {
+      "schema": "latent-readout/v1",
+      "latent_ids": [
+        1028,
+        2236,
+        7178,
+        5904,
+        7870,
+        7166
+      ],
+      "coefficients": [
+        0.030279679587075888,
+        -0.0015126583880656617,
+        0.03416297011948212,
+        0.025697142350402796,
+        0.02579968850060917,
+        0.03327077646410881
+      ],
+      "intercept": 0.0018556669131221247,
+      "n_features": 9216,
+      "dictionary_id": "study:rna40:sha256:ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+      "task": "binary",
+      "threshold": 0.05,
+      "metadata": {
+        "suite": "rna40",
+        "task_id": "polya_cleavage_site",
+        "position_annotation": "polya_cleavage_site",
+        "feature_index_base": 0,
+        "feature_count": 6,
+        "sae_checkpoint_sha256": "ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+        "threshold_source": "validation selection_curve.csv; never the training JSON best_threshold",
+        "validation_mean_sequence_macro_f1": 0.49937578027465307,
+        "test_mean_sequence_macro_f1": 0.49937578027465307,
+        "source_json": "inputs/fig/paper_figures/fig3/biological100/results/rna40_latent10/polya_cleavage_site/polya_cleavage_site_polya_cleavage_site_latent10_6.json",
+        "source_json_sha256": "152b0ce177e8049847431c33656f386198b1ac05e29867a5074b2f6bb4ea4238",
+        "summary_json": "inputs/fig/paper_figures/fig3/biological100/evaluation/rna40_valid_test/polya_cleavage_site/summary.json",
+        "summary_sha256": "ee344dcf3fac9cdc471343779bba0182cf5c410610e92f76da29b70b071cc5a2",
+        "selection_curve_sha256": "72dd0fb8178a89f58b4faecc321fd81c90efd07dd81873ab11a2bf86b89fa5e7",
+        "prediction": "intercept + activations[:, latent_ids] @ coefficients; positive if score >= threshold"
+      }
+    },
+    {
+      "schema": "latent-readout/v1",
+      "latent_ids": [
+        1028,
+        2236,
+        7178,
+        5904,
+        7870,
+        7166,
+        2187
+      ],
+      "coefficients": [
+        0.030049935622645383,
+        -0.0013923657802708217,
+        0.033841983194864304,
+        0.0240562054813713,
+        0.026270880502366804,
+        0.03277488561162902,
+        0.025694101514025434
+      ],
+      "intercept": 0.0015698912834988274,
+      "n_features": 9216,
+      "dictionary_id": "study:rna40:sha256:ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+      "task": "binary",
+      "threshold": 0.05,
+      "metadata": {
+        "suite": "rna40",
+        "task_id": "polya_cleavage_site",
+        "position_annotation": "polya_cleavage_site",
+        "feature_index_base": 0,
+        "feature_count": 7,
+        "sae_checkpoint_sha256": "ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+        "threshold_source": "validation selection_curve.csv; never the training JSON best_threshold",
+        "validation_mean_sequence_macro_f1": 0.49937578027465307,
+        "test_mean_sequence_macro_f1": 0.49937578027465307,
+        "source_json": "inputs/fig/paper_figures/fig3/biological100/results/rna40_latent10/polya_cleavage_site/polya_cleavage_site_polya_cleavage_site_latent10_7.json",
+        "source_json_sha256": "21f0bf4803210af0412cdf96a0e73ec46a1c974d4345f2b23a3bc6ccd799c8b3",
+        "summary_json": "inputs/fig/paper_figures/fig3/biological100/evaluation/rna40_valid_test/polya_cleavage_site/summary.json",
+        "summary_sha256": "ee344dcf3fac9cdc471343779bba0182cf5c410610e92f76da29b70b071cc5a2",
+        "selection_curve_sha256": "72dd0fb8178a89f58b4faecc321fd81c90efd07dd81873ab11a2bf86b89fa5e7",
+        "prediction": "intercept + activations[:, latent_ids] @ coefficients; positive if score >= threshold"
+      }
+    },
+    {
+      "schema": "latent-readout/v1",
+      "latent_ids": [
+        1028,
+        2236,
+        7178,
+        5904,
+        7870,
+        7166,
+        2187,
+        3802
+      ],
+      "coefficients": [
+        0.028777281338828144,
+        -0.0013303789189100528,
+        0.03306285004851826,
+        0.020506197500711146,
+        0.026688318324574967,
+        0.03307522224599025,
+        0.02586525722054276,
+        0.032552822252422085
+      ],
+      "intercept": 0.001344118515472306,
+      "n_features": 9216,
+      "dictionary_id": "study:rna40:sha256:ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+      "task": "binary",
+      "threshold": 0.05,
+      "metadata": {
+        "suite": "rna40",
+        "task_id": "polya_cleavage_site",
+        "position_annotation": "polya_cleavage_site",
+        "feature_index_base": 0,
+        "feature_count": 8,
+        "sae_checkpoint_sha256": "ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+        "threshold_source": "validation selection_curve.csv; never the training JSON best_threshold",
+        "validation_mean_sequence_macro_f1": 0.49937578027465307,
+        "test_mean_sequence_macro_f1": 0.49937578027465307,
+        "source_json": "inputs/fig/paper_figures/fig3/biological100/results/rna40_latent10/polya_cleavage_site/polya_cleavage_site_polya_cleavage_site_latent10_8.json",
+        "source_json_sha256": "b795f90a177fa8c701a90828f0c41c8b64e21b7b932f01749650c93053ff35e8",
+        "summary_json": "inputs/fig/paper_figures/fig3/biological100/evaluation/rna40_valid_test/polya_cleavage_site/summary.json",
+        "summary_sha256": "ee344dcf3fac9cdc471343779bba0182cf5c410610e92f76da29b70b071cc5a2",
+        "selection_curve_sha256": "72dd0fb8178a89f58b4faecc321fd81c90efd07dd81873ab11a2bf86b89fa5e7",
+        "prediction": "intercept + activations[:, latent_ids] @ coefficients; positive if score >= threshold"
+      }
+    },
+    {
+      "schema": "latent-readout/v1",
+      "latent_ids": [
+        1028,
+        2236,
+        7178,
+        5904,
+        7870,
+        7166,
+        2187,
+        3802,
+        6117
+      ],
+      "coefficients": [
+        0.029434734535351646,
+        -0.0011867970947604797,
+        0.03190958834729202,
+        0.021342577055453008,
+        0.025285547087517977,
+        0.03368248171678182,
+        0.026527197838561254,
+        0.031458292674641036,
+        0.026132179464973208
+      ],
+      "intercept": 0.001117980868129945,
+      "n_features": 9216,
+      "dictionary_id": "study:rna40:sha256:ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+      "task": "binary",
+      "threshold": 0.05,
+      "metadata": {
+        "suite": "rna40",
+        "task_id": "polya_cleavage_site",
+        "position_annotation": "polya_cleavage_site",
+        "feature_index_base": 0,
+        "feature_count": 9,
+        "sae_checkpoint_sha256": "ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+        "threshold_source": "validation selection_curve.csv; never the training JSON best_threshold",
+        "validation_mean_sequence_macro_f1": 0.49937578027465307,
+        "test_mean_sequence_macro_f1": 0.49937578027465307,
+        "source_json": "inputs/fig/paper_figures/fig3/biological100/results/rna40_latent10/polya_cleavage_site/polya_cleavage_site_polya_cleavage_site_latent10_9.json",
+        "source_json_sha256": "c17f416b1c6ae03bd7719e4c5d04e53b55a2a059428b2de08ad5862041a4a40c",
+        "summary_json": "inputs/fig/paper_figures/fig3/biological100/evaluation/rna40_valid_test/polya_cleavage_site/summary.json",
+        "summary_sha256": "ee344dcf3fac9cdc471343779bba0182cf5c410610e92f76da29b70b071cc5a2",
+        "selection_curve_sha256": "72dd0fb8178a89f58b4faecc321fd81c90efd07dd81873ab11a2bf86b89fa5e7",
+        "prediction": "intercept + activations[:, latent_ids] @ coefficients; positive if score >= threshold"
+      }
+    },
+    {
+      "schema": "latent-readout/v1",
+      "latent_ids": [
+        1028,
+        2236,
+        7178,
+        5904,
+        7870,
+        7166,
+        2187,
+        3802,
+        6117,
+        5457
+      ],
+      "coefficients": [
+        0.023836632663794266,
+        -0.0010446504732297406,
+        0.03073062510110945,
+        0.018971760529093582,
+        0.025997719457216132,
+        0.029701315767728723,
+        0.026235875149858433,
+        0.03354770459520557,
+        0.027224778995652146,
+        0.015573861249819002
+      ],
+      "intercept": 0.0008679151289894049,
+      "n_features": 9216,
+      "dictionary_id": "study:rna40:sha256:ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+      "task": "binary",
+      "threshold": 0.05,
+      "metadata": {
+        "suite": "rna40",
+        "task_id": "polya_cleavage_site",
+        "position_annotation": "polya_cleavage_site",
+        "feature_index_base": 0,
+        "feature_count": 10,
+        "sae_checkpoint_sha256": "ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+        "threshold_source": "validation selection_curve.csv; never the training JSON best_threshold",
+        "validation_mean_sequence_macro_f1": 0.49937578027465307,
+        "test_mean_sequence_macro_f1": 0.49937578027465307,
+        "source_json": "inputs/fig/paper_figures/fig3/biological100/results/rna40_latent10/polya_cleavage_site/polya_cleavage_site_polya_cleavage_site_latent10_10.json",
+        "source_json_sha256": "e4e0f90fc694e1e0ce13d33dc87f5f5ba88c4a8dac8e47a78056d45ad42cd717",
+        "summary_json": "inputs/fig/paper_figures/fig3/biological100/evaluation/rna40_valid_test/polya_cleavage_site/summary.json",
+        "summary_sha256": "ee344dcf3fac9cdc471343779bba0182cf5c410610e92f76da29b70b071cc5a2",
+        "selection_curve_sha256": "72dd0fb8178a89f58b4faecc321fd81c90efd07dd81873ab11a2bf86b89fa5e7",
+        "prediction": "intercept + activations[:, latent_ids] @ coefficients; positive if score >= threshold"
+      }
+    }
+  ],
+  "note": "Each K has its independently refitted coefficients and validation-selected threshold. This is distinct from truncating the final model with frozen coefficients."
+}

@@ -1,0 +1,57 @@
+{
+  "schema": "latent-readout/v1",
+  "latent_ids": [
+    4605,
+    8711,
+    3936,
+    759,
+    4612,
+    3783,
+    2626,
+    4476,
+    353,
+    2041
+  ],
+  "coefficients": [
+    0.15358197691684328,
+    0.19984909011902482,
+    0.2621204256492962,
+    0.2526476294698467,
+    0.2377313250856658,
+    0.539853830399613,
+    0.3495218430440226,
+    -0.3207504191338098,
+    0.2784572652812184,
+    0.27499220174734373
+  ],
+  "intercept": -0.0033232407772904775,
+  "n_features": 9216,
+  "dictionary_id": "study:rna40:sha256:ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+  "task": "binary",
+  "threshold": 0.15,
+  "metadata": {
+    "suite": "rna40",
+    "task_id": "polya_signal",
+    "position_annotation": "polya_signal",
+    "feature_index_base": 0,
+    "feature_count": 10,
+    "sae_checkpoint_sha256": "ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+    "threshold_source": "validation selection_curve.csv; never the training JSON best_threshold",
+    "validation_mean_sequence_macro_f1": 0.6676886007934317,
+    "test_mean_sequence_macro_f1": 0.6795498987073195,
+    "source_json": "inputs/fig/paper_figures/fig3/biological100/results/rna40_latent10/polya_signal/polya_signal_polya_signal_latent10_10.json",
+    "source_json_sha256": "86d62df62f3a33ebce1d0f47434b67507c08e877d3b1ee4018bc19ec54a4d764",
+    "summary_json": "inputs/fig/paper_figures/fig3/biological100/evaluation/rna40_valid_test/polya_signal/summary.json",
+    "summary_sha256": "30156cddee8136056a78a4f90e7f5b38cfc3174c9a2c51435a4d3482ea355fec",
+    "selection_curve_sha256": "6181b133bf7ee81172c9cad8a1652d93ee775252242c8bcbed575b41cb47ceda",
+    "prediction": "intercept + activations[:, latent_ids] @ coefficients; positive if score >= threshold",
+    "selection_rule": "max valid macro F1; ties: smaller K, then lower threshold",
+    "best_single_baseline": {
+      "latent_id": 9138,
+      "coefficient": 1.0,
+      "intercept": 0.0,
+      "threshold": 0.1,
+      "test_mean_sequence_macro_f1": 0.6254004752498671
+    }
+  }
+}

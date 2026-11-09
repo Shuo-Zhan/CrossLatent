@@ -1,0 +1,55 @@
+{
+  "schema": "latent-readout/v1",
+  "latent_ids": [
+    2845,
+    9587,
+    7664,
+    2331,
+    8622,
+    6108,
+    9703,
+    8107,
+    3174
+  ],
+  "coefficients": [
+    1.3031489154548184,
+    1.3329671217080505,
+    2.0426450683815114,
+    1.1752487665340017,
+    1.5207222558440927,
+    2.9126064996992147,
+    1.7890279592436649,
+    1.4465828927723878,
+    -0.37014449580638437
+  ],
+  "intercept": 0.020653067044644813,
+  "n_features": 10240,
+  "dictionary_id": "study:protein60:sha256:e60dd1f95e46ba48d9f2033c81c6f22527332d02591ed91d154a8de6fb5fc822",
+  "task": "binary",
+  "threshold": 0.3,
+  "metadata": {
+    "suite": "protein60",
+    "task_id": "PF01336",
+    "position_annotation": "mask_target_domain",
+    "feature_index_base": 0,
+    "feature_count": 9,
+    "sae_checkpoint_sha256": "e60dd1f95e46ba48d9f2033c81c6f22527332d02591ed91d154a8de6fb5fc822",
+    "threshold_source": "validation selection_curve.csv; never the training JSON best_threshold",
+    "validation_mean_sequence_macro_f1": 0.9657897022681675,
+    "test_mean_sequence_macro_f1": 0.9567334928491602,
+    "source_json": "inputs/fig/paper_figures/fig3/biological100/results/protein_domain_latent10/PF01336/PF01336_mask_target_domain_latent10_9.json",
+    "source_json_sha256": "7b5e4aef909836c27d4991d9028f803e0259b632f51389669aa60b89ae59b117",
+    "summary_json": "inputs/fig/paper_figures/fig3/biological100/evaluation/protein60_valid_test/PF01336/summary.json",
+    "summary_sha256": "0291df53881c63bdd4c355bdf0153b460075aad26b06e7554fed370de73426b0",
+    "selection_curve_sha256": "4312572c297e30c7844136d7bc4174c751838a1042cf727a5973d994d320a1de",
+    "prediction": "intercept + activations[:, latent_ids] @ coefficients; positive if score >= threshold",
+    "selection_rule": "max valid macro F1; ties: smaller K, then lower threshold",
+    "best_single_baseline": {
+      "latent_id": 2845,
+      "coefficient": 1.0,
+      "intercept": 0.0,
+      "threshold": 0.05,
+      "test_mean_sequence_macro_f1": 0.7063286700518205
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "latent-readout/v1",
+  "latent_ids": [
+    6031,
+    3813,
+    4224,
+    2502,
+    708,
+    1767,
+    4815
+  ],
+  "coefficients": [
+    0.14376217110072131,
+    0.18120727215199875,
+    0.23364303517769627,
+    0.16571186647729,
+    0.13412978166523537,
+    0.1793542573359306,
+    0.18528497127569926
+  ],
+  "intercept": -0.0034822190937213475,
+  "n_features": 9216,
+  "dictionary_id": "study:rna40:sha256:ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+  "task": "binary",
+  "threshold": 0.05,
+  "metadata": {
+    "suite": "rna40",
+    "task_id": "splice_acceptor",
+    "position_annotation": "splice_acceptor",
+    "feature_index_base": 0,
+    "feature_count": 7,
+    "sae_checkpoint_sha256": "ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+    "threshold_source": "validation selection_curve.csv; never the training JSON best_threshold",
+    "validation_mean_sequence_macro_f1": 0.5826372946687841,
+    "test_mean_sequence_macro_f1": 0.5835004559282205,
+    "source_json": "inputs/fig/paper_figures/fig3/biological100/results/rna40_latent10/splice_acceptor/splice_acceptor_splice_acceptor_latent10_7.json",
+    "source_json_sha256": "232d0cae12b8f3ad59c0c7446959a735824151a521c6fb7943792c09db1a14d4",
+    "summary_json": "inputs/fig/paper_figures/fig3/biological100/evaluation/rna40_valid_test/splice_acceptor/summary.json",
+    "summary_sha256": "e3eba820f9f24fc7074b48d7c2d91b90efce761541538c8c1681e647a48df737",
+    "selection_curve_sha256": "2ac9b5146c076a410d32eb897761d9c72aedc982808db96bfaefd82c945b5bad",
+    "prediction": "intercept + activations[:, latent_ids] @ coefficients; positive if score >= threshold",
+    "selection_rule": "max valid macro F1; ties: smaller K, then lower threshold",
+    "best_single_baseline": {
+      "latent_id": 708,
+      "coefficient": 1.0,
+      "intercept": 0.0,
+      "threshold": 0.15,
+      "test_mean_sequence_macro_f1": 0.5349517634881015
+    }
+  }
+}

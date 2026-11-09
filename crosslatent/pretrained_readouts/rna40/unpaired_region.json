@@ -1,0 +1,57 @@
+{
+  "schema": "latent-readout/v1",
+  "latent_ids": [
+    5803,
+    1305,
+    2291,
+    6089,
+    3036,
+    5703,
+    781,
+    7749,
+    4057,
+    2295
+  ],
+  "coefficients": [
+    -0.3413126577997989,
+    -0.4191422821978286,
+    -1.3510207221157506,
+    -0.3277655066176163,
+    -0.3279900070192625,
+    -0.29216727176608615,
+    -0.5930404984738065,
+    0.5660852490797975,
+    -0.4932932355175705,
+    0.5404588858380741
+  ],
+  "intercept": 0.7906917890090002,
+  "n_features": 9216,
+  "dictionary_id": "study:rna40:sha256:ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+  "task": "binary",
+  "threshold": 0.55,
+  "metadata": {
+    "suite": "rna40",
+    "task_id": "unpaired_region",
+    "position_annotation": "unpaired_region",
+    "feature_index_base": 0,
+    "feature_count": 10,
+    "sae_checkpoint_sha256": "ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+    "threshold_source": "validation selection_curve.csv; never the training JSON best_threshold",
+    "validation_mean_sequence_macro_f1": 0.6655465171504216,
+    "test_mean_sequence_macro_f1": 0.6597569336316581,
+    "source_json": "inputs/fig/paper_figures/fig3/biological100/results/rna40_latent10/unpaired_region/unpaired_region_unpaired_region_latent10_10.json",
+    "source_json_sha256": "bf686ba4912474f8658fefb57122a33e40b16c83ca3b1b6551b3569379f27782",
+    "summary_json": "inputs/fig/paper_figures/fig3/biological100/evaluation/rna40_valid_test/unpaired_region/summary.json",
+    "summary_sha256": "fc85a0b95239b0adf18f654c02775f35fee1605349595ff23618ecc2bf075c83",
+    "selection_curve_sha256": "d01034c90d63ff9f8445a5f8c8fb53aa3d580fc877f635a297d7dfcd76732fd8",
+    "prediction": "intercept + activations[:, latent_ids] @ coefficients; positive if score >= threshold",
+    "selection_rule": "max valid macro F1; ties: smaller K, then lower threshold",
+    "best_single_baseline": {
+      "latent_id": 2236,
+      "coefficient": 1.0,
+      "intercept": 0.0,
+      "threshold": 0.1,
+      "test_mean_sequence_macro_f1": 0.5378890370983384
+    }
+  }
+}

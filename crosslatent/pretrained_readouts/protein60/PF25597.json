@@ -1,0 +1,57 @@
+{
+  "schema": "latent-readout/v1",
+  "latent_ids": [
+    10155,
+    6958,
+    4878,
+    8087,
+    4557,
+    3271,
+    1392,
+    9703,
+    7203,
+    8622
+  ],
+  "coefficients": [
+    1.3153239388632574,
+    2.0008012275090445,
+    -1.1592157325269585,
+    -2.742446255849619,
+    0.6005656416692465,
+    -0.8406503189474545,
+    -1.9930384819202756,
+    -1.4898353083975735,
+    -1.6292603568024921,
+    0.8858309797462156
+  ],
+  "intercept": -0.007263611097487609,
+  "n_features": 10240,
+  "dictionary_id": "study:protein60:sha256:e60dd1f95e46ba48d9f2033c81c6f22527332d02591ed91d154a8de6fb5fc822",
+  "task": "binary",
+  "threshold": 0.45,
+  "metadata": {
+    "suite": "protein60",
+    "task_id": "PF25597",
+    "position_annotation": "mask_target_domain",
+    "feature_index_base": 0,
+    "feature_count": 10,
+    "sae_checkpoint_sha256": "e60dd1f95e46ba48d9f2033c81c6f22527332d02591ed91d154a8de6fb5fc822",
+    "threshold_source": "validation selection_curve.csv; never the training JSON best_threshold",
+    "validation_mean_sequence_macro_f1": 0.9736923500119737,
+    "test_mean_sequence_macro_f1": 0.9702818055017607,
+    "source_json": "inputs/fig/paper_figures/fig3/biological100/results/protein_domain_latent10/PF25597/PF25597_mask_target_domain_latent10_10.json",
+    "source_json_sha256": "3f5a5e32ac7663a172bacb4c96cdde5b42e92ed1e5f6d275d6074d66233eb84d",
+    "summary_json": "inputs/fig/paper_figures/fig3/biological100/evaluation/protein60_valid_test/PF25597/summary.json",
+    "summary_sha256": "faa579ce5b370bd0bcc6a4184ab814e42038486c5074e187d9ae61dbe99551bb",
+    "selection_curve_sha256": "54e08b14b7186d7de459590a02745aa29bb13cec059cb5af400b8220f523197f",
+    "prediction": "intercept + activations[:, latent_ids] @ coefficients; positive if score >= threshold",
+    "selection_rule": "max valid macro F1; ties: smaller K, then lower threshold",
+    "best_single_baseline": {
+      "latent_id": 10155,
+      "coefficient": 1.0,
+      "intercept": 0.0,
+      "threshold": 0.35,
+      "test_mean_sequence_macro_f1": 0.931116600898126
+    }
+  }
+}

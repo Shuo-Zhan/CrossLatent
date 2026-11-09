@@ -1,0 +1,57 @@
+{
+  "schema": "latent-readout/v1",
+  "latent_ids": [
+    683,
+    5677,
+    7889,
+    3530,
+    146,
+    2757,
+    749,
+    8619,
+    6858,
+    4687
+  ],
+  "coefficients": [
+    0.12363535465846245,
+    0.1416150920289697,
+    0.1368058844484067,
+    0.025779913141658003,
+    0.18336616515228546,
+    0.05832089613746196,
+    0.12510583220529273,
+    -0.05161978966581487,
+    0.05854607332136885,
+    -0.04319509289263768
+  ],
+  "intercept": -0.002099499656594492,
+  "n_features": 9216,
+  "dictionary_id": "study:rna40:sha256:ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+  "task": "binary",
+  "threshold": 0.05,
+  "metadata": {
+    "suite": "rna40",
+    "task_id": "m6a_site",
+    "position_annotation": "m6a_site",
+    "feature_index_base": 0,
+    "feature_count": 10,
+    "sae_checkpoint_sha256": "ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+    "threshold_source": "validation selection_curve.csv; never the training JSON best_threshold",
+    "validation_mean_sequence_macro_f1": 0.6191571030316442,
+    "test_mean_sequence_macro_f1": 0.604579101982,
+    "source_json": "inputs/fig/paper_figures/fig3/biological100/results/rna40_latent10/m6a_site/m6a_site_m6a_site_latent10_10.json",
+    "source_json_sha256": "5f4995998ddf17cd85b3f93134961118a57c825b0f071b4ac14cf049aa681885",
+    "summary_json": "inputs/fig/paper_figures/fig3/biological100/evaluation/rna40_valid_test/m6a_site/summary.json",
+    "summary_sha256": "8748ad25ff10f55207fc9e3ba03eb41b328cfe52a29baf002d911fae56d6ebe8",
+    "selection_curve_sha256": "552f286ac8be59864f4ffed7e81fc9945a3f0f32c37b5b41b37543d8ec4827cb",
+    "prediction": "intercept + activations[:, latent_ids] @ coefficients; positive if score >= threshold",
+    "selection_rule": "max valid macro F1; ties: smaller K, then lower threshold",
+    "best_single_baseline": {
+      "latent_id": 2757,
+      "coefficient": 1.0,
+      "intercept": 0.0,
+      "threshold": 0.1,
+      "test_mean_sequence_macro_f1": 0.533826114764253
+    }
+  }
+}

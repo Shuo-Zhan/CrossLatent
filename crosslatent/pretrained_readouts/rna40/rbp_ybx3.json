@@ -1,0 +1,57 @@
+{
+  "schema": "latent-readout/v1",
+  "latent_ids": [
+    2735,
+    9045,
+    7750,
+    9101,
+    2074,
+    5096,
+    2331,
+    2972,
+    5413,
+    1329
+  ],
+  "coefficients": [
+    -0.8043240740869162,
+    0.20195808114426994,
+    0.20965884007359833,
+    0.32268669088691376,
+    -0.9742551813435681,
+    -0.5503276584753789,
+    -0.7481681898865751,
+    -0.5465477009439079,
+    0.878380062599639,
+    0.7543104833168417
+  ],
+  "intercept": 0.23788488353920687,
+  "n_features": 9216,
+  "dictionary_id": "study:rna40:sha256:ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+  "task": "binary",
+  "threshold": 0.3,
+  "metadata": {
+    "suite": "rna40",
+    "task_id": "rbp_ybx3",
+    "position_annotation": "YBX3",
+    "feature_index_base": 0,
+    "feature_count": 10,
+    "sae_checkpoint_sha256": "ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+    "threshold_source": "validation selection_curve.csv; never the training JSON best_threshold",
+    "validation_mean_sequence_macro_f1": 0.4977377344067903,
+    "test_mean_sequence_macro_f1": 0.49298708288597076,
+    "source_json": "inputs/fig/paper_figures/fig3/biological100/results/rna40_latent10/rbp_ybx3/rbp_ybx3_YBX3_latent10_10.json",
+    "source_json_sha256": "b648ad1e2c6b426c55a6c93c3dc1760de10e24e71824cc0cd8a5feb7ea726107",
+    "summary_json": "inputs/fig/paper_figures/fig3/biological100/evaluation/rna40_valid_test/rbp_ybx3/summary.json",
+    "summary_sha256": "df581c638203c5164edb337e3d3d9d96cb5e0969bd534540babbfff1e47c43c7",
+    "selection_curve_sha256": "e01087735e6c6a4ade32ef50419e033388b1a2684de4aaa43832560f3ff845eb",
+    "prediction": "intercept + activations[:, latent_ids] @ coefficients; positive if score >= threshold",
+    "selection_rule": "max valid macro F1; ties: smaller K, then lower threshold",
+    "best_single_baseline": {
+      "latent_id": 1460,
+      "coefficient": 1.0,
+      "intercept": 0.0,
+      "threshold": 0.45,
+      "test_mean_sequence_macro_f1": 0.49938920895274547
+    }
+  }
+}

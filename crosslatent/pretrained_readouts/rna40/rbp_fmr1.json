@@ -1,0 +1,57 @@
+{
+  "schema": "latent-readout/v1",
+  "latent_ids": [
+    5656,
+    6348,
+    5459,
+    7602,
+    8447,
+    1247,
+    7419,
+    5593,
+    4925,
+    2236
+  ],
+  "coefficients": [
+    0.5942875224860291,
+    0.3494503577903817,
+    0.4414979613137296,
+    0.7742064464656817,
+    0.9149760835935693,
+    -1.3282836917850835,
+    0.6313079654483013,
+    0.21317061831684161,
+    -1.4447321023513358,
+    -0.05475911759681899
+  ],
+  "intercept": 0.2673926156983766,
+  "n_features": 9216,
+  "dictionary_id": "study:rna40:sha256:ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+  "task": "binary",
+  "threshold": 0.45,
+  "metadata": {
+    "suite": "rna40",
+    "task_id": "rbp_fmr1",
+    "position_annotation": "FMR1",
+    "feature_index_base": 0,
+    "feature_count": 10,
+    "sae_checkpoint_sha256": "ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+    "threshold_source": "validation selection_curve.csv; never the training JSON best_threshold",
+    "validation_mean_sequence_macro_f1": 0.5892509502260779,
+    "test_mean_sequence_macro_f1": 0.5616182316775037,
+    "source_json": "inputs/fig/paper_figures/fig3/biological100/results/rna40_latent10/rbp_fmr1/rbp_fmr1_FMR1_latent10_10.json",
+    "source_json_sha256": "49bee5f5ee350b0122efa08ee59e247dea6cfaf5651ea5c1ca8156c33fa7a190",
+    "summary_json": "inputs/fig/paper_figures/fig3/biological100/evaluation/rna40_valid_test/rbp_fmr1/summary.json",
+    "summary_sha256": "9f4cfc8f84af2fb6e0df9f20073c9517ac8bf671219a7d5af0a28ca7d47d4fe6",
+    "selection_curve_sha256": "7eb8dedb728df59979363df155b7c8fb172665064b6c9bba2a03900305f45ef6",
+    "prediction": "intercept + activations[:, latent_ids] @ coefficients; positive if score >= threshold",
+    "selection_rule": "max valid macro F1; ties: smaller K, then lower threshold",
+    "best_single_baseline": {
+      "latent_id": 1460,
+      "coefficient": 1.0,
+      "intercept": 0.0,
+      "threshold": 1.0,
+      "test_mean_sequence_macro_f1": 0.5081126798567074
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "schema": "latent-readout/v1",
+  "latent_ids": [
+    4880,
+    6335,
+    806,
+    1094,
+    6139,
+    7811,
+    4112,
+    5132,
+    6195
+  ],
+  "coefficients": [
+    3.9721028316750773,
+    2.350659861815095,
+    1.5618899452070079,
+    2.095084792424392,
+    1.7724095957456798,
+    4.443445205035775,
+    1.1155372618890915,
+    -2.2962889977842704,
+    1.3933329701635713
+  ],
+  "intercept": 0.010814178896704134,
+  "n_features": 10240,
+  "dictionary_id": "study:protein60:sha256:e60dd1f95e46ba48d9f2033c81c6f22527332d02591ed91d154a8de6fb5fc822",
+  "task": "binary",
+  "threshold": 0.3,
+  "metadata": {
+    "suite": "protein60",
+    "task_id": "PF02881",
+    "position_annotation": "mask_target_domain",
+    "feature_index_base": 0,
+    "feature_count": 9,
+    "sae_checkpoint_sha256": "e60dd1f95e46ba48d9f2033c81c6f22527332d02591ed91d154a8de6fb5fc822",
+    "threshold_source": "validation selection_curve.csv; never the training JSON best_threshold",
+    "validation_mean_sequence_macro_f1": 0.9237634652163765,
+    "test_mean_sequence_macro_f1": 0.9235912601246791,
+    "source_json": "inputs/fig/paper_figures/fig3/biological100/results/protein_domain_latent10/PF02881/PF02881_mask_target_domain_latent10_9.json",
+    "source_json_sha256": "c37b2f98fcc7fde49c7332076bba6e1f6297c4887eeed1e528252d9f0974fc04",
+    "summary_json": "inputs/fig/paper_figures/fig3/biological100/evaluation/protein60_valid_test/PF02881/summary.json",
+    "summary_sha256": "d5a161c14ac848d1f0bab598c4c1ac604d57e87a7169a72e7a313b3dfaacbb45",
+    "selection_curve_sha256": "6fce4d6242c3fe306cc2349b4b27528dc621076f370cf7c847dc9bc1b06c63e5",
+    "prediction": "intercept + activations[:, latent_ids] @ coefficients; positive if score >= threshold",
+    "selection_rule": "max valid macro F1; ties: smaller K, then lower threshold",
+    "best_single_baseline": {
+      "latent_id": 4880,
+      "coefficient": 1.0,
+      "intercept": 0.0,
+      "threshold": 0.05,
+      "test_mean_sequence_macro_f1": 0.9101689912035773
+    }
+  }
+}

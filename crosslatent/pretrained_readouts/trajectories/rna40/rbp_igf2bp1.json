@@ -1,0 +1,417 @@
+{
+  "schema": "crosslatent-fitted-budgets/v1",
+  "suite": "rna40",
+  "task_id": "rbp_igf2bp1",
+  "selected_k": 9,
+  "budgets": [
+    {
+      "schema": "latent-readout/v1",
+      "latent_ids": [
+        5656
+      ],
+      "coefficients": [
+        -1.0894369579295313
+      ],
+      "intercept": 0.3455163162232594,
+      "n_features": 9216,
+      "dictionary_id": "study:rna40:sha256:ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+      "task": "binary",
+      "threshold": 0.35,
+      "metadata": {
+        "suite": "rna40",
+        "task_id": "rbp_igf2bp1",
+        "position_annotation": "IGF2BP1",
+        "feature_index_base": 0,
+        "feature_count": 1,
+        "sae_checkpoint_sha256": "ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+        "threshold_source": "validation selection_curve.csv; never the training JSON best_threshold",
+        "validation_mean_sequence_macro_f1": 0.4241367046899833,
+        "test_mean_sequence_macro_f1": 0.4271960434609145,
+        "source_json": "inputs/fig/paper_figures/fig3/biological100/results/rna40_latent10/rbp_igf2bp1/rbp_igf2bp1_IGF2BP1_latent10_1.json",
+        "source_json_sha256": "8624196ee4f5cbbd2535ed3c51f6d97280a2e3194b4ab4808bb630d9dc7b3f32",
+        "summary_json": "inputs/fig/paper_figures/fig3/biological100/evaluation/rna40_valid_test/rbp_igf2bp1/summary.json",
+        "summary_sha256": "b2da23e12aaaf14492593c4d5137ffcb352ae116ba80999278c3852e460d358f",
+        "selection_curve_sha256": "b23ec67f719776a6773f637c18e23d2e532b36664244200074fd7f9733b0f236",
+        "prediction": "intercept + activations[:, latent_ids] @ coefficients; positive if score >= threshold"
+      }
+    },
+    {
+      "schema": "latent-readout/v1",
+      "latent_ids": [
+        5656,
+        3344
+      ],
+      "coefficients": [
+        -1.0957305879257266,
+        1.3626581956577886
+      ],
+      "intercept": 0.3375388576177654,
+      "n_features": 9216,
+      "dictionary_id": "study:rna40:sha256:ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+      "task": "binary",
+      "threshold": 0.35,
+      "metadata": {
+        "suite": "rna40",
+        "task_id": "rbp_igf2bp1",
+        "position_annotation": "IGF2BP1",
+        "feature_index_base": 0,
+        "feature_count": 2,
+        "sae_checkpoint_sha256": "ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+        "threshold_source": "validation selection_curve.csv; never the training JSON best_threshold",
+        "validation_mean_sequence_macro_f1": 0.46952226190331664,
+        "test_mean_sequence_macro_f1": 0.4718647734550923,
+        "source_json": "inputs/fig/paper_figures/fig3/biological100/results/rna40_latent10/rbp_igf2bp1/rbp_igf2bp1_IGF2BP1_latent10_2.json",
+        "source_json_sha256": "9450d123b58d0538698b7d17f1ac0688e0a48ee3f3f08ce3650f51a0cbcd7c39",
+        "summary_json": "inputs/fig/paper_figures/fig3/biological100/evaluation/rna40_valid_test/rbp_igf2bp1/summary.json",
+        "summary_sha256": "b2da23e12aaaf14492593c4d5137ffcb352ae116ba80999278c3852e460d358f",
+        "selection_curve_sha256": "b23ec67f719776a6773f637c18e23d2e532b36664244200074fd7f9733b0f236",
+        "prediction": "intercept + activations[:, latent_ids] @ coefficients; positive if score >= threshold"
+      }
+    },
+    {
+      "schema": "latent-readout/v1",
+      "latent_ids": [
+        5656,
+        3344,
+        3522
+      ],
+      "coefficients": [
+        -1.1190592031923443,
+        1.3203877227981369,
+        -1.456711254445869
+      ],
+      "intercept": 0.3427762079559633,
+      "n_features": 9216,
+      "dictionary_id": "study:rna40:sha256:ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+      "task": "binary",
+      "threshold": 0.35,
+      "metadata": {
+        "suite": "rna40",
+        "task_id": "rbp_igf2bp1",
+        "position_annotation": "IGF2BP1",
+        "feature_index_base": 0,
+        "feature_count": 3,
+        "sae_checkpoint_sha256": "ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+        "threshold_source": "validation selection_curve.csv; never the training JSON best_threshold",
+        "validation_mean_sequence_macro_f1": 0.47131994025768187,
+        "test_mean_sequence_macro_f1": 0.4737311653707632,
+        "source_json": "inputs/fig/paper_figures/fig3/biological100/results/rna40_latent10/rbp_igf2bp1/rbp_igf2bp1_IGF2BP1_latent10_3.json",
+        "source_json_sha256": "3934d37a67aca1e3c1cafc7a3bb22bdc8b3a05f86391ff3d65000309c8278635",
+        "summary_json": "inputs/fig/paper_figures/fig3/biological100/evaluation/rna40_valid_test/rbp_igf2bp1/summary.json",
+        "summary_sha256": "b2da23e12aaaf14492593c4d5137ffcb352ae116ba80999278c3852e460d358f",
+        "selection_curve_sha256": "b23ec67f719776a6773f637c18e23d2e532b36664244200074fd7f9733b0f236",
+        "prediction": "intercept + activations[:, latent_ids] @ coefficients; positive if score >= threshold"
+      }
+    },
+    {
+      "schema": "latent-readout/v1",
+      "latent_ids": [
+        5656,
+        3344,
+        3522,
+        1673
+      ],
+      "coefficients": [
+        -1.129834807361063,
+        1.2712919103764901,
+        -1.4230678050440688,
+        -1.3360677071113314
+      ],
+      "intercept": 0.3522581452758748,
+      "n_features": 9216,
+      "dictionary_id": "study:rna40:sha256:ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+      "task": "binary",
+      "threshold": 0.4,
+      "metadata": {
+        "suite": "rna40",
+        "task_id": "rbp_igf2bp1",
+        "position_annotation": "IGF2BP1",
+        "feature_index_base": 0,
+        "feature_count": 4,
+        "sae_checkpoint_sha256": "ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+        "threshold_source": "validation selection_curve.csv; never the training JSON best_threshold",
+        "validation_mean_sequence_macro_f1": 0.4511324221821652,
+        "test_mean_sequence_macro_f1": 0.45540625700230447,
+        "source_json": "inputs/fig/paper_figures/fig3/biological100/results/rna40_latent10/rbp_igf2bp1/rbp_igf2bp1_IGF2BP1_latent10_4.json",
+        "source_json_sha256": "b323cff931c248a3231a415e959a537541b272eeb50f4705d687a3701fd6d1fb",
+        "summary_json": "inputs/fig/paper_figures/fig3/biological100/evaluation/rna40_valid_test/rbp_igf2bp1/summary.json",
+        "summary_sha256": "b2da23e12aaaf14492593c4d5137ffcb352ae116ba80999278c3852e460d358f",
+        "selection_curve_sha256": "b23ec67f719776a6773f637c18e23d2e532b36664244200074fd7f9733b0f236",
+        "prediction": "intercept + activations[:, latent_ids] @ coefficients; positive if score >= threshold"
+      }
+    },
+    {
+      "schema": "latent-readout/v1",
+      "latent_ids": [
+        5656,
+        3344,
+        3522,
+        1673,
+        6348
+      ],
+      "coefficients": [
+        -1.0727078949694815,
+        1.2526552977834085,
+        -1.4894005464906235,
+        -1.3999551126283494,
+        -0.5212386374153374
+      ],
+      "intercept": 0.360743528709313,
+      "n_features": 9216,
+      "dictionary_id": "study:rna40:sha256:ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+      "task": "binary",
+      "threshold": 0.4,
+      "metadata": {
+        "suite": "rna40",
+        "task_id": "rbp_igf2bp1",
+        "position_annotation": "IGF2BP1",
+        "feature_index_base": 0,
+        "feature_count": 5,
+        "sae_checkpoint_sha256": "ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+        "threshold_source": "validation selection_curve.csv; never the training JSON best_threshold",
+        "validation_mean_sequence_macro_f1": 0.4533264789516596,
+        "test_mean_sequence_macro_f1": 0.45695714963126915,
+        "source_json": "inputs/fig/paper_figures/fig3/biological100/results/rna40_latent10/rbp_igf2bp1/rbp_igf2bp1_IGF2BP1_latent10_5.json",
+        "source_json_sha256": "97708404a4f41a0d21610f72a868c4d211023d9a0e3ccbd44d533b75dc407e3f",
+        "summary_json": "inputs/fig/paper_figures/fig3/biological100/evaluation/rna40_valid_test/rbp_igf2bp1/summary.json",
+        "summary_sha256": "b2da23e12aaaf14492593c4d5137ffcb352ae116ba80999278c3852e460d358f",
+        "selection_curve_sha256": "b23ec67f719776a6773f637c18e23d2e532b36664244200074fd7f9733b0f236",
+        "prediction": "intercept + activations[:, latent_ids] @ coefficients; positive if score >= threshold"
+      }
+    },
+    {
+      "schema": "latent-readout/v1",
+      "latent_ids": [
+        5656,
+        3344,
+        3522,
+        1673,
+        6348,
+        1945
+      ],
+      "coefficients": [
+        -1.045105589164409,
+        1.1857974751359788,
+        -1.5201340593211856,
+        -1.2938374001146535,
+        -0.5623655628479018,
+        -1.2890075356066968
+      ],
+      "intercept": 0.36963476929338573,
+      "n_features": 9216,
+      "dictionary_id": "study:rna40:sha256:ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+      "task": "binary",
+      "threshold": 0.35,
+      "metadata": {
+        "suite": "rna40",
+        "task_id": "rbp_igf2bp1",
+        "position_annotation": "IGF2BP1",
+        "feature_index_base": 0,
+        "feature_count": 6,
+        "sae_checkpoint_sha256": "ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+        "threshold_source": "validation selection_curve.csv; never the training JSON best_threshold",
+        "validation_mean_sequence_macro_f1": 0.47125801988097504,
+        "test_mean_sequence_macro_f1": 0.45302483886249456,
+        "source_json": "inputs/fig/paper_figures/fig3/biological100/results/rna40_latent10/rbp_igf2bp1/rbp_igf2bp1_IGF2BP1_latent10_6.json",
+        "source_json_sha256": "91ed57a35f00e6ea32995d4689e97deb04d6214767a2eb7004c86709b8dc539b",
+        "summary_json": "inputs/fig/paper_figures/fig3/biological100/evaluation/rna40_valid_test/rbp_igf2bp1/summary.json",
+        "summary_sha256": "b2da23e12aaaf14492593c4d5137ffcb352ae116ba80999278c3852e460d358f",
+        "selection_curve_sha256": "b23ec67f719776a6773f637c18e23d2e532b36664244200074fd7f9733b0f236",
+        "prediction": "intercept + activations[:, latent_ids] @ coefficients; positive if score >= threshold"
+      }
+    },
+    {
+      "schema": "latent-readout/v1",
+      "latent_ids": [
+        5656,
+        3344,
+        3522,
+        1673,
+        6348,
+        1945,
+        5185
+      ],
+      "coefficients": [
+        -1.0226804121112918,
+        1.2151801450027393,
+        -1.5049249959800512,
+        -1.2320777415153867,
+        -0.5799085404056873,
+        -1.31935960222325,
+        1.1254485838042638
+      ],
+      "intercept": 0.3616576626049492,
+      "n_features": 9216,
+      "dictionary_id": "study:rna40:sha256:ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+      "task": "binary",
+      "threshold": 0.4,
+      "metadata": {
+        "suite": "rna40",
+        "task_id": "rbp_igf2bp1",
+        "position_annotation": "IGF2BP1",
+        "feature_index_base": 0,
+        "feature_count": 7,
+        "sae_checkpoint_sha256": "ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+        "threshold_source": "validation selection_curve.csv; never the training JSON best_threshold",
+        "validation_mean_sequence_macro_f1": 0.4970828098432697,
+        "test_mean_sequence_macro_f1": 0.5004231712904725,
+        "source_json": "inputs/fig/paper_figures/fig3/biological100/results/rna40_latent10/rbp_igf2bp1/rbp_igf2bp1_IGF2BP1_latent10_7.json",
+        "source_json_sha256": "32fdb41913284764c5f8bda9494a3393c2f17a7f798e2f3b43a245094a1d79cf",
+        "summary_json": "inputs/fig/paper_figures/fig3/biological100/evaluation/rna40_valid_test/rbp_igf2bp1/summary.json",
+        "summary_sha256": "b2da23e12aaaf14492593c4d5137ffcb352ae116ba80999278c3852e460d358f",
+        "selection_curve_sha256": "b23ec67f719776a6773f637c18e23d2e532b36664244200074fd7f9733b0f236",
+        "prediction": "intercept + activations[:, latent_ids] @ coefficients; positive if score >= threshold"
+      }
+    },
+    {
+      "schema": "latent-readout/v1",
+      "latent_ids": [
+        5656,
+        3344,
+        3522,
+        1673,
+        6348,
+        1945,
+        5185,
+        5394
+      ],
+      "coefficients": [
+        -0.9922085303799347,
+        1.108641764971198,
+        -1.4676654960483442,
+        -1.1837860166700302,
+        -0.5713949952546921,
+        -1.285696857631645,
+        1.226309667978164,
+        0.6582056099448442
+      ],
+      "intercept": 0.35249302431746904,
+      "n_features": 9216,
+      "dictionary_id": "study:rna40:sha256:ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+      "task": "binary",
+      "threshold": 0.4,
+      "metadata": {
+        "suite": "rna40",
+        "task_id": "rbp_igf2bp1",
+        "position_annotation": "IGF2BP1",
+        "feature_index_base": 0,
+        "feature_count": 8,
+        "sae_checkpoint_sha256": "ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+        "threshold_source": "validation selection_curve.csv; never the training JSON best_threshold",
+        "validation_mean_sequence_macro_f1": 0.4991041373833081,
+        "test_mean_sequence_macro_f1": 0.5007194636935524,
+        "source_json": "inputs/fig/paper_figures/fig3/biological100/results/rna40_latent10/rbp_igf2bp1/rbp_igf2bp1_IGF2BP1_latent10_8.json",
+        "source_json_sha256": "a9506e66f3d47d4a58f9b1b08f8246fec48d2b7c1601b536d21444bf2e55508e",
+        "summary_json": "inputs/fig/paper_figures/fig3/biological100/evaluation/rna40_valid_test/rbp_igf2bp1/summary.json",
+        "summary_sha256": "b2da23e12aaaf14492593c4d5137ffcb352ae116ba80999278c3852e460d358f",
+        "selection_curve_sha256": "b23ec67f719776a6773f637c18e23d2e532b36664244200074fd7f9733b0f236",
+        "prediction": "intercept + activations[:, latent_ids] @ coefficients; positive if score >= threshold"
+      }
+    },
+    {
+      "schema": "latent-readout/v1",
+      "latent_ids": [
+        5656,
+        3344,
+        3522,
+        1673,
+        6348,
+        1945,
+        5185,
+        5394,
+        5268
+      ],
+      "coefficients": [
+        -0.9663544014582327,
+        1.1198379027968197,
+        -1.4844223160551133,
+        -1.2336007556854303,
+        -0.5653790956370429,
+        -1.2601965622194768,
+        1.1901682351114742,
+        0.6928994062603658,
+        0.8682231222700892
+      ],
+      "intercept": 0.34544455386359196,
+      "n_features": 9216,
+      "dictionary_id": "study:rna40:sha256:ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+      "task": "binary",
+      "threshold": 0.35,
+      "metadata": {
+        "suite": "rna40",
+        "task_id": "rbp_igf2bp1",
+        "position_annotation": "IGF2BP1",
+        "feature_index_base": 0,
+        "feature_count": 9,
+        "sae_checkpoint_sha256": "ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+        "threshold_source": "validation selection_curve.csv; never the training JSON best_threshold",
+        "validation_mean_sequence_macro_f1": 0.5350780125899878,
+        "test_mean_sequence_macro_f1": 0.5302887056119477,
+        "source_json": "inputs/fig/paper_figures/fig3/biological100/results/rna40_latent10/rbp_igf2bp1/rbp_igf2bp1_IGF2BP1_latent10_9.json",
+        "source_json_sha256": "43d8bcec3199e83032b06a24c98df4aa1f9040fd5936ffabfdda9158a8f9e86b",
+        "summary_json": "inputs/fig/paper_figures/fig3/biological100/evaluation/rna40_valid_test/rbp_igf2bp1/summary.json",
+        "summary_sha256": "b2da23e12aaaf14492593c4d5137ffcb352ae116ba80999278c3852e460d358f",
+        "selection_curve_sha256": "b23ec67f719776a6773f637c18e23d2e532b36664244200074fd7f9733b0f236",
+        "prediction": "intercept + activations[:, latent_ids] @ coefficients; positive if score >= threshold",
+        "selection_rule": "max valid macro F1; ties: smaller K, then lower threshold",
+        "best_single_baseline": {
+          "latent_id": 5364,
+          "coefficient": 1.0,
+          "intercept": 0.0,
+          "threshold": 0.1,
+          "test_mean_sequence_macro_f1": 0.5005129529795773
+        }
+      }
+    },
+    {
+      "schema": "latent-readout/v1",
+      "latent_ids": [
+        5656,
+        3344,
+        3522,
+        1673,
+        6348,
+        1945,
+        5185,
+        5394,
+        5268,
+        4553
+      ],
+      "coefficients": [
+        -0.9223481791740059,
+        1.1050992254692285,
+        -1.5245409770677198,
+        -1.1811295478714465,
+        -0.5399200131897175,
+        -1.2308698240168883,
+        1.1529028315272087,
+        0.7016563875804174,
+        0.8444611998914584,
+        -1.1262622926099155
+      ],
+      "intercept": 0.35042772911399106,
+      "n_features": 9216,
+      "dictionary_id": "study:rna40:sha256:ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+      "task": "binary",
+      "threshold": 0.4,
+      "metadata": {
+        "suite": "rna40",
+        "task_id": "rbp_igf2bp1",
+        "position_annotation": "IGF2BP1",
+        "feature_index_base": 0,
+        "feature_count": 10,
+        "sae_checkpoint_sha256": "ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+        "threshold_source": "validation selection_curve.csv; never the training JSON best_threshold",
+        "validation_mean_sequence_macro_f1": 0.5170816863250957,
+        "test_mean_sequence_macro_f1": 0.5187715096851729,
+        "source_json": "inputs/fig/paper_figures/fig3/biological100/results/rna40_latent10/rbp_igf2bp1/rbp_igf2bp1_IGF2BP1_latent10_10.json",
+        "source_json_sha256": "0957071e4b8c96e95baaefc0502e740c58f4947f5f8a6ef4a227169a57c8e38e",
+        "summary_json": "inputs/fig/paper_figures/fig3/biological100/evaluation/rna40_valid_test/rbp_igf2bp1/summary.json",
+        "summary_sha256": "b2da23e12aaaf14492593c4d5137ffcb352ae116ba80999278c3852e460d358f",
+        "selection_curve_sha256": "b23ec67f719776a6773f637c18e23d2e532b36664244200074fd7f9733b0f236",
+        "prediction": "intercept + activations[:, latent_ids] @ coefficients; positive if score >= threshold"
+      }
+    }
+  ],
+  "note": "Each K has its independently refitted coefficients and validation-selected threshold. This is distinct from truncating the final model with frozen coefficients."
+}

@@ -1,0 +1,39 @@
+{
+  "schema": "latent-readout/v1",
+  "latent_ids": [
+    7178
+  ],
+  "coefficients": [
+    0.04908503476729455
+  ],
+  "intercept": 0.0019133937656675465,
+  "n_features": 9216,
+  "dictionary_id": "study:rna40:sha256:ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+  "task": "binary",
+  "threshold": 0.05,
+  "metadata": {
+    "suite": "rna40",
+    "task_id": "intronic_polya_site",
+    "position_annotation": "intronic_polya_site",
+    "feature_index_base": 0,
+    "feature_count": 1,
+    "sae_checkpoint_sha256": "ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+    "threshold_source": "validation selection_curve.csv; never the training JSON best_threshold",
+    "validation_mean_sequence_macro_f1": 0.49937578027465307,
+    "test_mean_sequence_macro_f1": 0.49937578027465307,
+    "source_json": "inputs/fig/paper_figures/fig3/biological100/results/rna40_latent10/intronic_polya_site/intronic_polya_site_intronic_polya_site_latent10_1.json",
+    "source_json_sha256": "63be6c2fc4a9beceff624e5cac9dd139234f484098d2d74d139b2aa47a81da3b",
+    "summary_json": "inputs/fig/paper_figures/fig3/biological100/evaluation/rna40_valid_test/intronic_polya_site/summary.json",
+    "summary_sha256": "f44d0e061c5fd088670e4ab8ea510055da2efa6319fbec732952b883b959e8af",
+    "selection_curve_sha256": "6e1eaf4c3b011504c3d0582fe8561c68d1e3fccf4460f4b6c6a4d109653347ad",
+    "prediction": "intercept + activations[:, latent_ids] @ coefficients; positive if score >= threshold",
+    "selection_rule": "max valid macro F1; ties: smaller K, then lower threshold",
+    "best_single_baseline": {
+      "latent_id": 7166,
+      "coefficient": 1.0,
+      "intercept": 0.0,
+      "threshold": 0.2,
+      "test_mean_sequence_macro_f1": 0.5062107750226955
+    }
+  }
+}

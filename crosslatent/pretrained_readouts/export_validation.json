@@ -1,0 +1,8 @@
+{
+  "tasks": 100,
+  "budgets": 1000,
+  "validation_choices_verified": true,
+  "protein_mean_f1": 0.8754275545496294,
+  "rna_mean_f1": 0.5859182085822378,
+  "json_bytes": 2088950
+}

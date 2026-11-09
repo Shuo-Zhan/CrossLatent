@@ -883,7 +883,7 @@ def encode_features(
     embedding: np.ndarray,
     device: str,
 ) -> np.ndarray:
-    x = torch.from_numpy(np.asarray(embedding, dtype=np.float32, copy=True)).to(device)
+    x = torch.from_numpy(np.array(embedding, dtype=np.float32, copy=True)).to(device)
     return model.encode(x).detach().cpu().numpy()
 
 

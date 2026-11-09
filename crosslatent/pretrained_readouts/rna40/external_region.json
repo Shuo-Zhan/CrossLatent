@@ -1,0 +1,55 @@
+{
+  "schema": "latent-readout/v1",
+  "latent_ids": [
+    3206,
+    1983,
+    5096,
+    8349,
+    5803,
+    5703,
+    8493,
+    2333,
+    3036
+  ],
+  "coefficients": [
+    1.0808477785013475,
+    0.6369063330344692,
+    0.8682282384628306,
+    -0.6338995944607201,
+    -0.4862950801504652,
+    -0.10763581493134189,
+    -0.6463866751931737,
+    0.6563900135225399,
+    -0.09462299192536144
+  ],
+  "intercept": 0.2525189799063475,
+  "n_features": 9216,
+  "dictionary_id": "study:rna40:sha256:ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+  "task": "binary",
+  "threshold": 0.35,
+  "metadata": {
+    "suite": "rna40",
+    "task_id": "external_region",
+    "position_annotation": "external_region",
+    "feature_index_base": 0,
+    "feature_count": 9,
+    "sae_checkpoint_sha256": "ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+    "threshold_source": "validation selection_curve.csv; never the training JSON best_threshold",
+    "validation_mean_sequence_macro_f1": 0.6473684789679296,
+    "test_mean_sequence_macro_f1": 0.6268385703168194,
+    "source_json": "inputs/fig/paper_figures/fig3/biological100/results/rna40_latent10/external_region/external_region_external_region_latent10_9.json",
+    "source_json_sha256": "8a7e09cf6c320982980e797f89a996e04ff39dc10c11eeb362e22354f354756c",
+    "summary_json": "inputs/fig/paper_figures/fig3/biological100/evaluation/rna40_valid_test/external_region/summary.json",
+    "summary_sha256": "9690b9887f4bc67500bf1d437dbb6573f17a682d2d85948654141894f04a7cf1",
+    "selection_curve_sha256": "84ab821e569bf64e1338991344da7be4db9f5308079b7d15acb0a1dfb2ad70f7",
+    "prediction": "intercept + activations[:, latent_ids] @ coefficients; positive if score >= threshold",
+    "selection_rule": "max valid macro F1; ties: smaller K, then lower threshold",
+    "best_single_baseline": {
+      "latent_id": 1300,
+      "coefficient": 1.0,
+      "intercept": 0.0,
+      "threshold": 0.2,
+      "test_mean_sequence_macro_f1": 0.5009856764863727
+    }
+  }
+}

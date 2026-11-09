@@ -1,0 +1,417 @@
+{
+  "schema": "crosslatent-fitted-budgets/v1",
+  "suite": "rna40",
+  "task_id": "pseudoknot",
+  "selected_k": 10,
+  "budgets": [
+    {
+      "schema": "latent-readout/v1",
+      "latent_ids": [
+        5981
+      ],
+      "coefficients": [
+        -0.402926270368633
+      ],
+      "intercept": 0.20423884441216786,
+      "n_features": 9216,
+      "dictionary_id": "study:rna40:sha256:ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+      "task": "binary",
+      "threshold": 0.25,
+      "metadata": {
+        "suite": "rna40",
+        "task_id": "pseudoknot",
+        "position_annotation": "pseudoknot",
+        "feature_index_base": 0,
+        "feature_count": 1,
+        "sae_checkpoint_sha256": "ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+        "threshold_source": "validation selection_curve.csv; never the training JSON best_threshold",
+        "validation_mean_sequence_macro_f1": 0.45520434474568827,
+        "test_mean_sequence_macro_f1": 0.4527383797123027,
+        "source_json": "inputs/fig/paper_figures/fig3/biological100/results/rna40_latent10/pseudoknot/pseudoknot_pseudoknot_latent10_1.json",
+        "source_json_sha256": "55edad60746b4e326c0c425dadcea1d41adcf6652c1b116f457d42a69edbbaad",
+        "summary_json": "inputs/fig/paper_figures/fig3/biological100/evaluation/rna40_valid_test/pseudoknot/summary.json",
+        "summary_sha256": "231edf85d2dd5efa49f9f97f5143cb810d22e1defe4f0ab1b6129b45d98cf96a",
+        "selection_curve_sha256": "b86e748cdb815409804a8012c82e6a3fbef75098c71fef938eac2ac11e4adbe8",
+        "prediction": "intercept + activations[:, latent_ids] @ coefficients; positive if score >= threshold"
+      }
+    },
+    {
+      "schema": "latent-readout/v1",
+      "latent_ids": [
+        5981,
+        7262
+      ],
+      "coefficients": [
+        -0.37826186259406785,
+        0.6469465245931372
+      ],
+      "intercept": 0.18687256164048244,
+      "n_features": 9216,
+      "dictionary_id": "study:rna40:sha256:ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+      "task": "binary",
+      "threshold": 0.2,
+      "metadata": {
+        "suite": "rna40",
+        "task_id": "pseudoknot",
+        "position_annotation": "pseudoknot",
+        "feature_index_base": 0,
+        "feature_count": 2,
+        "sae_checkpoint_sha256": "ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+        "threshold_source": "validation selection_curve.csv; never the training JSON best_threshold",
+        "validation_mean_sequence_macro_f1": 0.4813960026056303,
+        "test_mean_sequence_macro_f1": 0.47866540864558926,
+        "source_json": "inputs/fig/paper_figures/fig3/biological100/results/rna40_latent10/pseudoknot/pseudoknot_pseudoknot_latent10_2.json",
+        "source_json_sha256": "72234d7300b5c78ec24daa3087a1339ffbbcfbf28bf3dccf4e18e8093ceb1c7f",
+        "summary_json": "inputs/fig/paper_figures/fig3/biological100/evaluation/rna40_valid_test/pseudoknot/summary.json",
+        "summary_sha256": "231edf85d2dd5efa49f9f97f5143cb810d22e1defe4f0ab1b6129b45d98cf96a",
+        "selection_curve_sha256": "b86e748cdb815409804a8012c82e6a3fbef75098c71fef938eac2ac11e4adbe8",
+        "prediction": "intercept + activations[:, latent_ids] @ coefficients; positive if score >= threshold"
+      }
+    },
+    {
+      "schema": "latent-readout/v1",
+      "latent_ids": [
+        5981,
+        7262,
+        6813
+      ],
+      "coefficients": [
+        -0.3368268032147294,
+        0.6927992429492712,
+        0.3231148142466649
+      ],
+      "intercept": 0.16965168377684242,
+      "n_features": 9216,
+      "dictionary_id": "study:rna40:sha256:ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+      "task": "binary",
+      "threshold": 0.2,
+      "metadata": {
+        "suite": "rna40",
+        "task_id": "pseudoknot",
+        "position_annotation": "pseudoknot",
+        "feature_index_base": 0,
+        "feature_count": 3,
+        "sae_checkpoint_sha256": "ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+        "threshold_source": "validation selection_curve.csv; never the training JSON best_threshold",
+        "validation_mean_sequence_macro_f1": 0.4801860800347145,
+        "test_mean_sequence_macro_f1": 0.4781947318218309,
+        "source_json": "inputs/fig/paper_figures/fig3/biological100/results/rna40_latent10/pseudoknot/pseudoknot_pseudoknot_latent10_3.json",
+        "source_json_sha256": "de86bc9f5c396c347dd7a7fb9d8b9470f28133608ccf95ce172283789692b1b3",
+        "summary_json": "inputs/fig/paper_figures/fig3/biological100/evaluation/rna40_valid_test/pseudoknot/summary.json",
+        "summary_sha256": "231edf85d2dd5efa49f9f97f5143cb810d22e1defe4f0ab1b6129b45d98cf96a",
+        "selection_curve_sha256": "b86e748cdb815409804a8012c82e6a3fbef75098c71fef938eac2ac11e4adbe8",
+        "prediction": "intercept + activations[:, latent_ids] @ coefficients; positive if score >= threshold"
+      }
+    },
+    {
+      "schema": "latent-readout/v1",
+      "latent_ids": [
+        5981,
+        7262,
+        6813,
+        3236
+      ],
+      "coefficients": [
+        -0.31514604486724157,
+        0.6978013935398255,
+        0.3392282056307734,
+        0.23422465373850818
+      ],
+      "intercept": 0.16062091926109956,
+      "n_features": 9216,
+      "dictionary_id": "study:rna40:sha256:ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+      "task": "binary",
+      "threshold": 0.2,
+      "metadata": {
+        "suite": "rna40",
+        "task_id": "pseudoknot",
+        "position_annotation": "pseudoknot",
+        "feature_index_base": 0,
+        "feature_count": 4,
+        "sae_checkpoint_sha256": "ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+        "threshold_source": "validation selection_curve.csv; never the training JSON best_threshold",
+        "validation_mean_sequence_macro_f1": 0.48179544719615947,
+        "test_mean_sequence_macro_f1": 0.47743731150111324,
+        "source_json": "inputs/fig/paper_figures/fig3/biological100/results/rna40_latent10/pseudoknot/pseudoknot_pseudoknot_latent10_4.json",
+        "source_json_sha256": "4ea616d366c8402f0db51d8ed4068769782325373b5bee9385efa9616682c964",
+        "summary_json": "inputs/fig/paper_figures/fig3/biological100/evaluation/rna40_valid_test/pseudoknot/summary.json",
+        "summary_sha256": "231edf85d2dd5efa49f9f97f5143cb810d22e1defe4f0ab1b6129b45d98cf96a",
+        "selection_curve_sha256": "b86e748cdb815409804a8012c82e6a3fbef75098c71fef938eac2ac11e4adbe8",
+        "prediction": "intercept + activations[:, latent_ids] @ coefficients; positive if score >= threshold"
+      }
+    },
+    {
+      "schema": "latent-readout/v1",
+      "latent_ids": [
+        5981,
+        7262,
+        6813,
+        3236,
+        1914
+      ],
+      "coefficients": [
+        -0.29809499020910935,
+        0.6062980913984605,
+        0.3415998334690855,
+        0.24383362332472638,
+        0.4232432241115676
+      ],
+      "intercept": 0.1503059519473519,
+      "n_features": 9216,
+      "dictionary_id": "study:rna40:sha256:ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+      "task": "binary",
+      "threshold": 0.2,
+      "metadata": {
+        "suite": "rna40",
+        "task_id": "pseudoknot",
+        "position_annotation": "pseudoknot",
+        "feature_index_base": 0,
+        "feature_count": 5,
+        "sae_checkpoint_sha256": "ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+        "threshold_source": "validation selection_curve.csv; never the training JSON best_threshold",
+        "validation_mean_sequence_macro_f1": 0.48110215235556075,
+        "test_mean_sequence_macro_f1": 0.4753474246505908,
+        "source_json": "inputs/fig/paper_figures/fig3/biological100/results/rna40_latent10/pseudoknot/pseudoknot_pseudoknot_latent10_5.json",
+        "source_json_sha256": "0326149c176b8d85a5989b748542b4e2368a0ddb6f1d72c375e93e9e533439e8",
+        "summary_json": "inputs/fig/paper_figures/fig3/biological100/evaluation/rna40_valid_test/pseudoknot/summary.json",
+        "summary_sha256": "231edf85d2dd5efa49f9f97f5143cb810d22e1defe4f0ab1b6129b45d98cf96a",
+        "selection_curve_sha256": "b86e748cdb815409804a8012c82e6a3fbef75098c71fef938eac2ac11e4adbe8",
+        "prediction": "intercept + activations[:, latent_ids] @ coefficients; positive if score >= threshold"
+      }
+    },
+    {
+      "schema": "latent-readout/v1",
+      "latent_ids": [
+        5981,
+        7262,
+        6813,
+        3236,
+        1914,
+        7400
+      ],
+      "coefficients": [
+        -0.2797332204366999,
+        0.49703395219890345,
+        0.3502945701261169,
+        0.2551923044140436,
+        0.4454757057726457,
+        0.20219112686193327
+      ],
+      "intercept": 0.1444371567552469,
+      "n_features": 9216,
+      "dictionary_id": "study:rna40:sha256:ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+      "task": "binary",
+      "threshold": 0.2,
+      "metadata": {
+        "suite": "rna40",
+        "task_id": "pseudoknot",
+        "position_annotation": "pseudoknot",
+        "feature_index_base": 0,
+        "feature_count": 6,
+        "sae_checkpoint_sha256": "ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+        "threshold_source": "validation selection_curve.csv; never the training JSON best_threshold",
+        "validation_mean_sequence_macro_f1": 0.4823287107662722,
+        "test_mean_sequence_macro_f1": 0.47457105683872464,
+        "source_json": "inputs/fig/paper_figures/fig3/biological100/results/rna40_latent10/pseudoknot/pseudoknot_pseudoknot_latent10_6.json",
+        "source_json_sha256": "b81c5a32050cec8389a72b1831ef031da782b8afc38a6be3f3ead168fb2ca979",
+        "summary_json": "inputs/fig/paper_figures/fig3/biological100/evaluation/rna40_valid_test/pseudoknot/summary.json",
+        "summary_sha256": "231edf85d2dd5efa49f9f97f5143cb810d22e1defe4f0ab1b6129b45d98cf96a",
+        "selection_curve_sha256": "b86e748cdb815409804a8012c82e6a3fbef75098c71fef938eac2ac11e4adbe8",
+        "prediction": "intercept + activations[:, latent_ids] @ coefficients; positive if score >= threshold"
+      }
+    },
+    {
+      "schema": "latent-readout/v1",
+      "latent_ids": [
+        5981,
+        7262,
+        6813,
+        3236,
+        1914,
+        7400,
+        4715
+      ],
+      "coefficients": [
+        -0.3002275991599947,
+        0.56358887112195,
+        0.37894261869820006,
+        0.26362103916366997,
+        0.5427558473732358,
+        0.21848908479698273,
+        -0.38508441536726296
+      ],
+      "intercept": 0.14989725369142723,
+      "n_features": 9216,
+      "dictionary_id": "study:rna40:sha256:ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+      "task": "binary",
+      "threshold": 0.2,
+      "metadata": {
+        "suite": "rna40",
+        "task_id": "pseudoknot",
+        "position_annotation": "pseudoknot",
+        "feature_index_base": 0,
+        "feature_count": 7,
+        "sae_checkpoint_sha256": "ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+        "threshold_source": "validation selection_curve.csv; never the training JSON best_threshold",
+        "validation_mean_sequence_macro_f1": 0.48044147539619475,
+        "test_mean_sequence_macro_f1": 0.47667806212930547,
+        "source_json": "inputs/fig/paper_figures/fig3/biological100/results/rna40_latent10/pseudoknot/pseudoknot_pseudoknot_latent10_7.json",
+        "source_json_sha256": "ad6d37a927a7dc0b89e5224d5ea4d78c43c9ec5c3a870d4459af461773d6a29f",
+        "summary_json": "inputs/fig/paper_figures/fig3/biological100/evaluation/rna40_valid_test/pseudoknot/summary.json",
+        "summary_sha256": "231edf85d2dd5efa49f9f97f5143cb810d22e1defe4f0ab1b6129b45d98cf96a",
+        "selection_curve_sha256": "b86e748cdb815409804a8012c82e6a3fbef75098c71fef938eac2ac11e4adbe8",
+        "prediction": "intercept + activations[:, latent_ids] @ coefficients; positive if score >= threshold"
+      }
+    },
+    {
+      "schema": "latent-readout/v1",
+      "latent_ids": [
+        5981,
+        7262,
+        6813,
+        3236,
+        1914,
+        7400,
+        4715,
+        6744
+      ],
+      "coefficients": [
+        -0.2941327110661607,
+        0.5219617174656324,
+        0.39018774616458474,
+        0.2662890589029661,
+        0.5559512360390945,
+        0.2259429800430756,
+        -0.38869481492586483,
+        0.918170398007236
+      ],
+      "intercept": 0.13832228120709852,
+      "n_features": 9216,
+      "dictionary_id": "study:rna40:sha256:ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+      "task": "binary",
+      "threshold": 0.25,
+      "metadata": {
+        "suite": "rna40",
+        "task_id": "pseudoknot",
+        "position_annotation": "pseudoknot",
+        "feature_index_base": 0,
+        "feature_count": 8,
+        "sae_checkpoint_sha256": "ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+        "threshold_source": "validation selection_curve.csv; never the training JSON best_threshold",
+        "validation_mean_sequence_macro_f1": 0.4850824963510098,
+        "test_mean_sequence_macro_f1": 0.47554029978621287,
+        "source_json": "inputs/fig/paper_figures/fig3/biological100/results/rna40_latent10/pseudoknot/pseudoknot_pseudoknot_latent10_8.json",
+        "source_json_sha256": "536cb09aad7296aad71140c855b980a0645b31cac515c2d7a106cd97fce2a4a1",
+        "summary_json": "inputs/fig/paper_figures/fig3/biological100/evaluation/rna40_valid_test/pseudoknot/summary.json",
+        "summary_sha256": "231edf85d2dd5efa49f9f97f5143cb810d22e1defe4f0ab1b6129b45d98cf96a",
+        "selection_curve_sha256": "b86e748cdb815409804a8012c82e6a3fbef75098c71fef938eac2ac11e4adbe8",
+        "prediction": "intercept + activations[:, latent_ids] @ coefficients; positive if score >= threshold"
+      }
+    },
+    {
+      "schema": "latent-readout/v1",
+      "latent_ids": [
+        5981,
+        7262,
+        6813,
+        3236,
+        1914,
+        7400,
+        4715,
+        6744,
+        8612
+      ],
+      "coefficients": [
+        -0.2853790018909875,
+        0.5056918447389638,
+        0.27218801785635743,
+        0.2618390595718267,
+        0.5906312549622207,
+        0.2344237938648193,
+        -0.48876553215339663,
+        0.9047874140587182,
+        0.5388528382175727
+      ],
+      "intercept": 0.13431217677393853,
+      "n_features": 9216,
+      "dictionary_id": "study:rna40:sha256:ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+      "task": "binary",
+      "threshold": 0.25,
+      "metadata": {
+        "suite": "rna40",
+        "task_id": "pseudoknot",
+        "position_annotation": "pseudoknot",
+        "feature_index_base": 0,
+        "feature_count": 9,
+        "sae_checkpoint_sha256": "ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+        "threshold_source": "validation selection_curve.csv; never the training JSON best_threshold",
+        "validation_mean_sequence_macro_f1": 0.49209961719022727,
+        "test_mean_sequence_macro_f1": 0.47661821682346595,
+        "source_json": "inputs/fig/paper_figures/fig3/biological100/results/rna40_latent10/pseudoknot/pseudoknot_pseudoknot_latent10_9.json",
+        "source_json_sha256": "698223b6949b59d3b32939c6f66c4b69cce21ca5bc4040f5b843c30a2a8a7f1f",
+        "summary_json": "inputs/fig/paper_figures/fig3/biological100/evaluation/rna40_valid_test/pseudoknot/summary.json",
+        "summary_sha256": "231edf85d2dd5efa49f9f97f5143cb810d22e1defe4f0ab1b6129b45d98cf96a",
+        "selection_curve_sha256": "b86e748cdb815409804a8012c82e6a3fbef75098c71fef938eac2ac11e4adbe8",
+        "prediction": "intercept + activations[:, latent_ids] @ coefficients; positive if score >= threshold"
+      }
+    },
+    {
+      "schema": "latent-readout/v1",
+      "latent_ids": [
+        5981,
+        7262,
+        6813,
+        3236,
+        1914,
+        7400,
+        4715,
+        6744,
+        8612,
+        3295
+      ],
+      "coefficients": [
+        -0.26572041875513563,
+        0.48549473027805806,
+        0.26941586936443535,
+        0.2551254138522041,
+        0.5834653209238113,
+        0.23188791698824623,
+        -0.49784904715074163,
+        0.8787521531030468,
+        0.5636476813831938,
+        -0.34992790860817347
+      ],
+      "intercept": 0.14237191289504414,
+      "n_features": 9216,
+      "dictionary_id": "study:rna40:sha256:ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+      "task": "binary",
+      "threshold": 0.25,
+      "metadata": {
+        "suite": "rna40",
+        "task_id": "pseudoknot",
+        "position_annotation": "pseudoknot",
+        "feature_index_base": 0,
+        "feature_count": 10,
+        "sae_checkpoint_sha256": "ec665a6308b1744bfc9462f71641bda8421e507aef4c565adaa7f8ffa78ce37e",
+        "threshold_source": "validation selection_curve.csv; never the training JSON best_threshold",
+        "validation_mean_sequence_macro_f1": 0.49258275035334825,
+        "test_mean_sequence_macro_f1": 0.4768163119805659,
+        "source_json": "inputs/fig/paper_figures/fig3/biological100/results/rna40_latent10/pseudoknot/pseudoknot_pseudoknot_latent10_10.json",
+        "source_json_sha256": "eb534f717258f90b7f4f9a7a7c82994eadc095a97b7d792337334abb77bc8bc8",
+        "summary_json": "inputs/fig/paper_figures/fig3/biological100/evaluation/rna40_valid_test/pseudoknot/summary.json",
+        "summary_sha256": "231edf85d2dd5efa49f9f97f5143cb810d22e1defe4f0ab1b6129b45d98cf96a",
+        "selection_curve_sha256": "b86e748cdb815409804a8012c82e6a3fbef75098c71fef938eac2ac11e4adbe8",
+        "prediction": "intercept + activations[:, latent_ids] @ coefficients; positive if score >= threshold",
+        "selection_rule": "max valid macro F1; ties: smaller K, then lower threshold",
+        "best_single_baseline": {
+          "latent_id": 6089,
+          "coefficient": 1.0,
+          "intercept": 0.0,
+          "threshold": 0.35,
+          "test_mean_sequence_macro_f1": 0.4868398382363377
+        }
+      }
+    }
+  ],
+  "note": "Each K has its independently refitted coefficients and validation-selected threshold. This is distinct from truncating the final model with frozen coefficients."
+}

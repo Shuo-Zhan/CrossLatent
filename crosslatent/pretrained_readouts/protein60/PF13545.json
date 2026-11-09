@@ -1,0 +1,57 @@
+{
+  "schema": "latent-readout/v1",
+  "latent_ids": [
+    4738,
+    8812,
+    9077,
+    8787,
+    2766,
+    4184,
+    1980,
+    4945,
+    2375,
+    2888
+  ],
+  "coefficients": [
+    2.3756432215232457,
+    2.733119081560878,
+    3.8356965753685377,
+    2.4876668838205,
+    -1.0901813307855484,
+    2.0338027491230855,
+    3.14126107468637,
+    1.3124764664895263,
+    1.221708799114142,
+    -5.865673525546689
+  ],
+  "intercept": 0.16627308957134548,
+  "n_features": 10240,
+  "dictionary_id": "study:protein60:sha256:e60dd1f95e46ba48d9f2033c81c6f22527332d02591ed91d154a8de6fb5fc822",
+  "task": "binary",
+  "threshold": 0.25,
+  "metadata": {
+    "suite": "protein60",
+    "task_id": "PF13545",
+    "position_annotation": "mask_target_domain",
+    "feature_index_base": 0,
+    "feature_count": 10,
+    "sae_checkpoint_sha256": "e60dd1f95e46ba48d9f2033c81c6f22527332d02591ed91d154a8de6fb5fc822",
+    "threshold_source": "validation selection_curve.csv; never the training JSON best_threshold",
+    "validation_mean_sequence_macro_f1": 0.9453879009257515,
+    "test_mean_sequence_macro_f1": 0.9283638905714029,
+    "source_json": "inputs/fig/paper_figures/fig3/biological100/results/protein_domain_latent10/PF13545/PF13545_mask_target_domain_latent10_10.json",
+    "source_json_sha256": "9a6e646d4e67d78f3daca6eae4c88bbdbfa148c35eb2812df03b2e3ad0d8816b",
+    "summary_json": "inputs/fig/paper_figures/fig3/biological100/evaluation/protein60_valid_test/PF13545/summary.json",
+    "summary_sha256": "f95d2cf86f634c1eaef19379f9078f69b19f2209a315720ec3a9c5ebced114f6",
+    "selection_curve_sha256": "f9f0b613545cea9aae0384c494f909386afc15c70e4037a500e8d9842866c0ad",
+    "prediction": "intercept + activations[:, latent_ids] @ coefficients; positive if score >= threshold",
+    "selection_rule": "max valid macro F1; ties: smaller K, then lower threshold",
+    "best_single_baseline": {
+      "latent_id": 4738,
+      "coefficient": 1.0,
+      "intercept": 0.0,
+      "threshold": 0.05,
+      "test_mean_sequence_macro_f1": 0.6969848562518741
+    }
+  }
+}

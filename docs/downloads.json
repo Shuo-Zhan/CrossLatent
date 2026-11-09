@@ -1,0 +1,22 @@
+{
+  "schema": "crosslatent-public-downloads/v1",
+  "anonymous_downloads_verified": true,
+  "archives": [
+    {
+      "file": "CrossLatent-study-data.zip",
+      "url": "https://drive.google.com/file/d/1vw_L7JU67ECAWKoeZmfX9KRCN_U0xn1q/view?usp=drive_link",
+      "file_id": "1vw_L7JU67ECAWKoeZmfX9KRCN_U0xn1q",
+      "bytes": 222371101,
+      "sha256": "41d384678cf8dd038dd6a4144e2bfa9837a35795c5dd0f3fef3afd066ab07cab",
+      "payload_files": 6096
+    },
+    {
+      "file": "CrossLatent-rna-sae.zip",
+      "url": "https://drive.google.com/file/d/1b2zQmqIVEXz0Nag2CQyxXXQTWU1RsiXu/view?usp=drive_link",
+      "file_id": "1b2zQmqIVEXz0Nag2CQyxXXQTWU1RsiXu",
+      "bytes": 52586730,
+      "sha256": "bc121277fd9f8f9ca98884901cb3f150fdf0dff9dec12fdbe488239ec8eaa84b",
+      "payload_files": 4
+    }
+  ]
+}
