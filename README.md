@@ -93,4 +93,4 @@ Author-owned code uses [MIT](LICENSE); [third-party notices](THIRD_PARTY_NOTICES
 
 ## Citation
 
-Software citation metadata are provided in [CITATION.cff](CITATION.cff). The associated study is *CrossLatent traces the assembly and reuse of sparse features in biological sequence models*. A preprint or publication link can be added when available.
+Software citation metadata are provided in [CITATION.cff](CITATION.cff). The associated study is *CrossLatent traces the assembly and reuse of sparse features in biological sequence models*. A preprint or publication link will be added when available.
